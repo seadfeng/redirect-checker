@@ -1,0 +1,45 @@
+{
+  "frontend": {
+    "go_to_homepage": "Go to homepage",
+    "page_not_found": "Page not found",
+    "meta": {
+      "default": {
+        "title": "Redirect Checker - Your Ultimate URL Redirect Analysis Tool",
+        "description": "Free online tool to check URL redirects, analyze redirect chains, and optimize your website's SEO performance."
+      }
+    },
+    "home": {
+      "h1": "Your Ultimate URL Redirect Analysis Tool",
+      "sub_to_h1": "Check Your Redirects and Status Codes",
+      "results_for": "Results For",
+      "no_redirects_found": "No redirects found.",
+      "redirect_chain": "Redirect Chain",
+      "status": "Status",
+      "final_destination": "Final Destination",
+      "check": "Check",
+      "faq": {
+        "qa1": {
+          "question": "Can I check multiple URLs at once?",
+          "answer": "Yes, our bulk redirect checker allows you to analyze multiple URLs simultaneously. Simply enter one URL per line in the input field."
+        },
+        "qa2": {
+          "question": "Does the tool support international URLs?",
+          "answer": "Absolutely! Our redirect checker works with URLs from any country or in any language.\n"
+        },
+        "qa3": {
+          "question": "How can I check redirects for mobile users?",
+          "answer": "Select a mobile user-agent (like iPhone or Android) from the dropdown menu to simulate mobile redirect behavior.\n"
+        },
+        "qa4": {
+          "question": "Is there a limit to how many redirects the tool can follow?",
+          "answer": "Our tool can follow up to 10 redirects in a chain. If there are more than 10, it will stop and alert you to the unusually long redirect chain.\n"
+        },
+        "qa5": {
+          "question": "Can this tool help me find broken redirects?",
+          "answer": "Yes, the tool will identify any broken links in the redirect chain and show you the HTTP status code (like 404 for \"Not Found\") where the chain breaks."
+        },
+        "title": "Frequently Asked Questions"
+      }
+    }
+  }
+}

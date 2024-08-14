@@ -1,0 +1,45 @@
+{
+  "frontend": {
+    "go_to_homepage": "Go to homepage",
+    "page_not_found": "Page not found",
+    "meta": {
+      "default": {
+        "title": "Controllo di Reindirizzamento - Il Tuo Strumento Definitivo per l'Analisi dei Reindirizzamenti URL",
+        "description": "Strumento online gratuito per controllare i reindirizzamenti URL, analizzare le catene di reindirizzamento e ottimizzare le prestazioni SEO del tuo sito web."
+      }
+    },
+    "home": {
+      "h1": "Il Tuo Strumento Definitivo per l'Analisi dei Reindirizzamenti URL",
+      "sub_to_h1": "Controlla i tuoi reindirizzamenti e codici di stato",
+      "results_for": "Risultati per",
+      "no_redirects_found": "Nessun reindirizzamento trovato.",
+      "redirect_chain": "Catena di reindirizzamento",
+      "status": "Stato",
+      "final_destination": "Destinazione finale",
+      "check": "Controllo",
+      "faq": {
+        "qa1": {
+          "question": "Posso controllare più URL contemporaneamente?",
+          "answer": "Sì, il nostro verificatore di reindirizzamenti in blocco consente di analizzare più URL contemporaneamente. Basta inserire un URL per riga nel campo di input.\n"
+        },
+        "qa2": {
+          "question": "Lo strumento supporta gli URL internazionali?",
+          "answer": "Assolutamente! Il nostro verificatore di reindirizzamenti funziona con URL di qualsiasi paese e in qualsiasi lingua.\n"
+        },
+        "qa3": {
+          "question": "モバイルユーザーのリダイレクトをチェックするにはどうすればよいですか？",
+          "answer": "Seleziona un user-agent mobile (come iPhone o Android) dal menu a tendina per simulare il comportamento del reindirizzamento mobile.\n"
+        },
+        "qa4": {
+          "question": "C'è un limite al numero di reindirizzamenti che lo strumento può seguire?",
+          "answer": "Il nostro strumento può seguire fino a 10 reindirizzamenti in una catena. Se ce ne sono più di 10, si fermerà e ti avviserà della catena di reindirizzamento insolitamente lunga.\n"
+        },
+        "qa5": {
+          "question": "Questo strumento può aiutarmi a trovare reindirizzamenti non funzionanti?",
+          "answer": "Sì, lo strumento identificherà eventuali collegamenti interrotti nella catena di reindirizzamento e ti mostrerà il codice di stato HTTP (come 404 per \"Non trovato\") dove la catena si interrompe."
+        },
+        "title": "Domande frequenti"
+      }
+    }
+  }
+}

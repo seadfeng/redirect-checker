@@ -1,0 +1,45 @@
+{
+  "frontend": {
+    "go_to_homepage": "Go to homepage",
+    "page_not_found": "Page not found",
+    "meta": {
+      "default": {
+        "title": "Comprobador de Redirección: Su Herramienta Definitiva para el Análisis de Redirecciones de URL",
+        "description": "Herramienta en línea gratuita para comprobar redirecciones de URL, analizar cadenas de redirección y optimizar el rendimiento SEO de su sitio web."
+      }
+    },
+    "home": {
+      "h1": "Su Herramienta Definitiva para el Análisis de Redirecciones de URL",
+      "sub_to_h1": "Verifique sus redirecciones y códigos de estado",
+      "results_for": "Resultados para",
+      "no_redirects_found": "No se encontraron redirecciones.",
+      "redirect_chain": "Cadena de redireccionamiento",
+      "status": "Estado",
+      "final_destination": "Destino final",
+      "check": "Controlar",
+      "faq": {
+        "qa1": {
+          "question": "¿Puedo comprobar varias URL a la vez?",
+          "answer": "Sí, nuestro verificador de redirecciones en masa le permite analizar varias URL simultáneamente. Simplemente ingrese una URL por línea en el campo de entrada.\n"
+        },
+        "qa2": {
+          "question": "¿El herramienta admite URL internacionales?",
+          "answer": "¡Absolutamente! Nuestro verificador de redirecciones funciona con URL de cualquier país o en cualquier idioma.\n"
+        },
+        "qa3": {
+          "question": "¿Cómo puedo verificar redirecciones para usuarios móviles?",
+          "answer": "Seleccione un agente de usuario móvil (como iPhone o Android) en el menú desplegable para simular el comportamiento de redirección móvil.\n"
+        },
+        "qa4": {
+          "question": "¿Hay un límite en cuántas redirecciones puede seguir la herramienta?",
+          "answer": "Nuestra herramienta puede seguir hasta 10 redirecciones en una cadena. Si hay más de 10, se detendrá y le alertará sobre la cadena de redirecciones inusualmente larga.\n"
+        },
+        "qa5": {
+          "question": "¿Puede esta herramienta ayudarme a encontrar redirecciones rotas?",
+          "answer": "Sí, la herramienta identificará cualquier enlace roto en la cadena de redirección y le mostrará el código de estado HTTP (como 404 para \"No encontrado\") donde se rompe la cadena."
+        },
+        "title": "Preguntas frecuentes"
+      }
+    }
+  }
+}

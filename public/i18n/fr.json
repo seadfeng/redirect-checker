@@ -1,0 +1,45 @@
+{
+  "frontend": {
+    "go_to_homepage": "Go to homepage",
+    "page_not_found": "Page not found",
+    "meta": {
+      "default": {
+        "title": "Vérificateur de Redirection - Votre Outil Ultime d'Analyse de Redirection d'URL",
+        "description": "Outil en ligne gratuit pour vérifier les redirections d'URL, analyser les chaînes de redirection et optimiser les performances SEO de votre site web."
+      }
+    },
+    "home": {
+      "h1": "Votre Outil Ultime d'Analyse de Redirection d'URL",
+      "sub_to_h1": "Verifique sus redirecciones y códigos de estado",
+      "results_for": "Résultats pour",
+      "no_redirects_found": "Aucune redirection trouvée.",
+      "redirect_chain": "Chaîne de redirection",
+      "status": "Statut",
+      "final_destination": "Destination finale",
+      "check": "Vérifier",
+      "faq": {
+        "qa1": {
+          "question": "Puis-je vérifier plusieurs URL à la fois ?",
+          "answer": "Oui, notre vérificateur de redirection en masse vous permet d'analyser plusieurs URL simultanément. Il vous suffit d'entrer une URL par ligne dans le champ de saisie.\n"
+        },
+        "qa2": {
+          "question": "L'outil prend-il en charge les URL internationales ?",
+          "answer": "Oui, notre vérificateur de redirection en masse vous permet d'analyser plusieurs URL simultanément. Il vous suffit d'entrer une URL par ligne dans le champ de saisie.\n"
+        },
+        "qa3": {
+          "question": "Comment puis-je vérifier les redirections pour les utilisateurs mobiles?",
+          "answer": "Sélectionnez un agent utilisateur mobile (comme iPhone ou Android) dans le menu déroulant pour simuler le comportement de redirection mobile.\n"
+        },
+        "qa4": {
+          "question": "Existe-t-il une limite au nombre de redirections que l'outil peut suivre ?",
+          "answer": "Notre outil peut suivre jusqu'à 10 redirections dans une chaîne. S'il y en a plus de 10, il s'arrêtera et vous alertera de la chaîne de redirection inhabituellement longue.\n"
+        },
+        "qa5": {
+          "question": "Cet outil peut-il m'aider à trouver des redirections cassées ?",
+          "answer": "Oui, l'outil identifiera tous les liens brisés dans la chaîne de redirection et vous montrera le code d'état HTTP (comme 404 pour \"Non trouvé\") où la chaîne se casse."
+        },
+        "title": "Foire aux questions"
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "frontend": {
+    "go_to_homepage": "Go to homepage",
+    "page_not_found": "Page not found",
+    "meta": {
+      "default": {
+        "title": "Omdirigeringskontroll - Ditt Ultimata Verktyg för URL-Omdirigeringsanalys",
+        "description": "Gratis onlineverktyg för att kontrollera URL-omdirigeringar, analysera omdirigeringskedjor och optimera din webbplats SEO-prestanda."
+      }
+    },
+    "home": {
+      "h1": "Ditt Ultimata Verktyg för URL-Omdirigeringsanalys",
+      "sub_to_h1": "Kontrollera dina omdirigeringar och statuskoder",
+      "results_for": "Resultat för",
+      "no_redirects_found": "Inga omdirigeringar hittades.",
+      "redirect_chain": "Omdirigera kedja",
+      "status": "Status",
+      "final_destination": "Slutdestination",
+      "check": "Kontrollera",
+      "faq": {
+        "qa1": {
+          "question": "Kan jag kontrollera flera URL:er samtidigt?",
+          "answer": "Ja, vår bulk-omdirigeringskontroll tillåter dig att analysera flera URL:er samtidigt. Ange helt enkelt en URL per rad i inmatningsfältet.\n"
+        },
+        "qa2": {
+          "question": "Stöder verktyget internationella URL:er?",
+          "answer": "Absolut! Vår omdirigeringskontroll fungerar med URL:er från vilket land som helst och på vilket språk som helst.\n"
+        },
+        "qa3": {
+          "question": "Hur kan jag kontrollera omdirigeringar för mobilanvändare?",
+          "answer": "Välj en mobil user-agent (som iPhone eller Android) från rullgardinsmenyn för att simulera mobilt omdirigeringsbeteende.\n"
+        },
+        "qa4": {
+          "question": "Finns det en gräns för hur många omdirigeringar verktyget kan följa?",
+          "answer": "Vårt verktyg kan följa upp till 10 omdirigeringar i en kedja. Om det finns fler än 10, kommer det att sluta och varna dig för den ovanligt långa omdirigeringskedjan.\n"
+        },
+        "qa5": {
+          "question": "Kan detta verktyg hjälpa mig att hitta trasiga omdirigeringar?",
+          "answer": "Ja, verktyget identifierar alla trasiga länkar i omdirigeringskedjan och visar dig HTTP-statuskoden (som 404 för \"Ej hittad\") där kedjan bryts."
+        },
+        "title": "Vanliga frågor"
+      }
+    }
+  }
+}

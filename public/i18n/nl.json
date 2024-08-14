@@ -1,0 +1,45 @@
+{
+  "frontend": {
+    "go_to_homepage": "Go to homepage",
+    "page_not_found": "Page not found",
+    "meta": {
+      "default": {
+        "title": "Redirect Checker - Uw Ultieme URL-Redirectanalyse Tool",
+        "description": "Gratis online tool om URL-omleidingen te controleren, omleidingsketens te analyseren en de SEO-prestaties van uw website te optimaliseren."
+      }
+    },
+    "home": {
+      "h1": "Uw Ultieme URL-Redirectanalyse Tool",
+      "sub_to_h1": "Controleer uw omleidingen en statuscodes",
+      "results_for": "Resultaten voor",
+      "no_redirects_found": "Geen omleidingen gevonden.",
+      "redirect_chain": "Omleidingsketen",
+      "status": "Status",
+      "final_destination": "Eindbestemming",
+      "check": "Rekening",
+      "faq": {
+        "qa1": {
+          "answer": "Ja, onze bulk-redirectchecker stelt u in staat om meerdere URL's tegelijkertijd te analyseren. Voer gewoon één URL per regel in het invoerveld in.\n",
+          "question": "Kan ik meerdere URL's tegelijk controleren?"
+        },
+        "qa2": {
+          "question": "Ondersteunt de tool internationale URL's?",
+          "answer": "Absoluut! Onze redirectchecker werkt met URL's uit elk land of in elke taal.\n"
+        },
+        "qa3": {
+          "question": "Jak mogę sprawdzić przekierowania dla użytkowników mobilnych?",
+          "answer": "Selecteer een mobiele user-agent (zoals iPhone of Android) uit het dropdownmenu om het gedrag van mobiele redirects te simuleren.\n"
+        },
+        "qa4": {
+          "question": "Is er een limiet aan het aantal redirects dat de tool kan volgen?",
+          "answer": "Onze tool kan maximaal 10 redirects in een keten volgen. Als er meer dan 10 zijn, stopt het en waarschuwt het u voor de ongewoon lange redirectketen.\n"
+        },
+        "qa5": {
+          "question": "Kan deze tool mij helpen kapotte redirects te vinden?",
+          "answer": "Ja, de tool zal alle kapotte links in de redirectketen identificeren en u de HTTP-statuscode tonen (zoals 404 voor \"Niet gevonden\") waar de keten breekt."
+        },
+        "title": "Veelgestelde vragen"
+      }
+    }
+  }
+}

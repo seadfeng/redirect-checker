@@ -1,0 +1,45 @@
+{
+  "frontend": {
+    "go_to_homepage": "Go to homepage",
+    "page_not_found": "Page not found",
+    "meta": {
+      "default": {
+        "title": "Redirect-Checker – Ihr ultimatives Tool zur Analyse von URL-Weiterleitungen",
+        "description": "Kostenloses Online-Tool zur Überprüfung von URL-Weiterleitungen, Analyse von Weiterleitungsketten und Optimierung der SEO-Leistung Ihrer Website."
+      }
+    },
+    "home": {
+      "h1": "Ihr ultimatives Tool zur Analyse von URL-Weiterleitungen",
+      "sub_to_h1": "Überprüfen Sie Ihre Weiterleitungen und Statuscodes",
+      "results_for": "Ergebnisse für",
+      "no_redirects_found": "Keine Weiterleitungen gefunden.",
+      "redirect_chain": "Weiterleitungskette",
+      "status": "Status",
+      "final_destination": "Endziel",
+      "check": "Überprüfen",
+      "faq": {
+        "qa1": {
+          "question": "¿Puedo comprobar varias URL a la vez?",
+          "answer": "Ja, unser Bulk-Redirect-Checker ermöglicht es Ihnen, mehrere URLs gleichzeitig zu analysieren. Geben Sie einfach eine URL pro Zeile in das Eingabefeld ein.\n"
+        },
+        "qa2": {
+          "question": "Kann ich mehrere URLs auf einmal überprüfen?",
+          "answer": "Absolut! Unser Redirect-Checker funktioniert mit URLs aus jedem Land und in jeder Sprache.\n"
+        },
+        "qa3": {
+          "question": "Wie kann ich Weiterleitungen für mobile Benutzer überprüfen?",
+          "answer": "Wählen Sie eine mobile User-Agent (wie iPhone oder Android) aus dem Dropdown-Menü, um das Verhalten von mobilen Weiterleitungen zu simulieren.\n"
+        },
+        "qa4": {
+          "question": "Gibt es eine Begrenzung, wie viele Weiterleitungen das Tool verfolgen kann?",
+          "answer": "Unser Tool kann bis zu 10 Weiterleitungen in einer Kette verfolgen. Wenn es mehr als 10 sind, wird es stoppen und Sie auf die ungewöhnlich lange Weiterleitungskette aufmerksam machen.\n"
+        },
+        "qa5": {
+          "question": "Kann dieses Tool mir helfen, fehlerhafte Weiterleitungen zu finden?",
+          "answer": "Ja, das Tool wird alle defekten Links in der Weiterleitungskette identifizieren und Ihnen den HTTP-Statuscode (wie 404 für \"Nicht gefunden\") anzeigen, bei dem die Kette unterbrochen wird."
+        },
+        "title": "Häufig gestellte Fragen"
+      }
+    }
+  }
+}

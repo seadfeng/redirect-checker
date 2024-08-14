@@ -1,0 +1,45 @@
+{
+  "frontend": {
+    "go_to_homepage": "Go to homepage",
+    "page_not_found": "Page not found",
+    "meta": {
+      "default": {
+        "title": "Sprawdzanie Przekierowań - Twoje Ostateczne Narzędzie do Analizy Przekierowań URL",
+        "description": "Gratis online tool om URL-omleidingen te controleren, omleidingsketens te analyseren en de SEO-prestaties van uw website te optimaliseren."
+      }
+    },
+    "home": {
+      "h1": "Twoje Ostateczne Narzędzie do Analizy Przekierowań URL",
+      "sub_to_h1": "Sprawdź swoje przekierowania i kody statusu",
+      "results_for": "Wyniki dla",
+      "no_redirects_found": "Nie znaleziono przekierowań.",
+      "redirect_chain": "Łańcuch przekierowań",
+      "status": "Status",
+      "final_destination": "Ostateczne miejsce docelowe",
+      "check": "Sprawdzać",
+      "faq": {
+        "qa1": {
+          "answer": "Tak, nasz masowy sprawdzacz przekierowań pozwala na jednoczesne analizowanie wielu adresów URL. Wystarczy wprowadzić jeden adres URL na linię w polu wejściowym.\n",
+          "question": "Czy mogę sprawdzić wiele adresów URL jednocześnie?"
+        },
+        "qa2": {
+          "question": "Czy narzędzie obsługuje międzynarodowe adresy URL?",
+          "answer": "Oczywiście! Nasz sprawdzacz przekierowań działa z adresami URL z dowolnego kraju i w dowolnym języku.\n"
+        },
+        "qa3": {
+          "question": "Jak mogę sprawdzić przekierowania dla użytkowników mobilnych?",
+          "answer": "Wybierz agent użytkownika mobilnego (np. iPhone lub Android) z menu rozwijanego, aby zasymulować zachowanie przekierowania mobilnego.\n"
+        },
+        "qa4": {
+          "question": "Czy istnieje limit liczby przekierowań, które narzędzie może śledzić?",
+          "answer": "Nasze narzędzie może śledzić do 10 przekierowań w łańcuchu. Jeśli jest ich więcej niż 10, narzędzie zatrzyma się i powiadomi Cię o niezwykle długim łańcuchu przekierowań.\n"
+        },
+        "qa5": {
+          "question": "Czy to narzędzie może pomóc mi znaleźć uszkodzone przekierowania?",
+          "answer": "Tak, narzędzie zidentyfikuje wszelkie uszkodzone linki w łańcuchu przekierowań i pokaże Ci kod statusu HTTP (np. 404 dla \"Nie znaleziono\"), gdzie łańcuch się przerywa.\n"
+        },
+        "title": "Często zadawane pytania"
+      }
+    }
+  }
+}
