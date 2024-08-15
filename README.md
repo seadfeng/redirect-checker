@@ -79,6 +79,29 @@ curl --request POST \
 }'
 ```
 
+
+## Deploy to Cloudflare Pages
+
+
+### Local Deploy
+
+Simple Deployment
+
+```sh
+# install wrangler
+npm install -g wrangler
+
+# Cloudflare Login 
+wrangler login
+
+# Deploy to Cloudflare Pages
+npm run deploy
+```
+
+### Deploy by GitHub Actions
+
+For detailed instructions, see [this guide](doc/workflows.md)
+
 ## Contributing
 
 We welcome contributions to the Redirect Checker project. Please feel free to submit issues, feature requests, or pull requests.
