@@ -41,5 +41,9 @@
         "title": "Foire aux questions"
       }
     }
+  },
+  "shared": {
+    "mobile": "Mobile",
+    "desktop": "Bureau"
   }
 }

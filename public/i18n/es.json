@@ -41,5 +41,9 @@
         "title": "Preguntas frecuentes"
       }
     }
+  },
+  "shared": {
+    "desktop": "De oficina",
+    "mobile": "Móvil"
   }
 }

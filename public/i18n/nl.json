@@ -41,5 +41,9 @@
         "title": "Veelgestelde vragen"
       }
     }
+  },
+  "shared": {
+    "desktop": "Bureaublad",
+    "mobile": "Mobiel"
   }
 }

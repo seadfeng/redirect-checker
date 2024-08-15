@@ -41,5 +41,9 @@
         "title": "Sıkça Sorulan Sorular"
       }
     }
+  },
+  "shared": {
+    "desktop": "Masaüstü",
+    "mobile": "Mobil"
   }
 }

@@ -1,45 +1,6 @@
 {
-  "frontend": {
-    "go_to_homepage": "Go to homepage",
-    "page_not_found": "Page not found",
-    "meta": {
-      "default": {
-        "title": "重定向检查器 - 您的终极URL重定向分析工具",
-        "description": "免费在线工具，用于检查URL重定向、分析重定向链，并优化您网站的SEO性能。"
-      }
-    },
-    "home": {
-      "h1": "您的终极URL重定向分析工具",
-      "sub_to_h1": "检查您的重定向和状态码",
-      "results_for": "结果",
-      "no_redirects_found": "未找到重定向。",
-      "redirect_chain": "重定向链",
-      "status": "状态",
-      "final_destination": "最终目的地",
-      "check": "查看",
-      "faq": {
-        "qa1": {
-          "answer": "可以，我们的批量重定向检查器允许您同时分析多个 URL。只需在输入字段中每行输入一个 URL 即可。",
-          "question": "我可以一次检查多个URL吗？"
-        },
-        "qa2": {
-          "question": "该工具支持国际URL吗？",
-          "answer": "绝对支持！我们的重定向检查器可以处理来自任何国家或任何语言的URL。\n"
-        },
-        "qa3": {
-          "question": "如何检查移动用户的重定向？",
-          "answer": "从下拉菜单中选择移动用户代理（如 iPhone 或 Android），以模拟移动重定向行为。\n"
-        },
-        "qa4": {
-          "question": "该工具可以跟踪多少次重定向？",
-          "answer": "我们的工具最多可以跟踪链中的 10 次重定向。如果超过 10 次，它将停止并提醒您注意异常长的重定向链。\n"
-        },
-        "qa5": {
-          "question": "该工具可以帮助我找到损坏的重定向吗？",
-          "answer": "是的，该工具会识别重定向链中任何损坏的链接，并向您显示链中断时的 HTTP 状态代码（如 404 \"未找到\"）。"
-        },
-        "title": "常见问题解答"
-      }
-    }
+  "shared": {
+    "mobile": "移动",
+    "desktop": "桌面"
   }
 }

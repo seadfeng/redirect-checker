@@ -41,5 +41,9 @@
         "title": "Często zadawane pytania"
       }
     }
+  },
+  "shared": {
+    "mobile": "Przenośny",
+    "desktop": "Pulpit"
   }
 }

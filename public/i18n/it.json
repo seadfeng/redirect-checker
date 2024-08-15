@@ -41,5 +41,9 @@
         "title": "Domande frequenti"
       }
     }
+  },
+  "shared": {
+    "desktop": "Desktop",
+    "mobile": "Mobile"
   }
 }

@@ -41,5 +41,9 @@
         "title": "Vanliga frågor"
       }
     }
+  },
+  "shared": {
+    "desktop": "Skrivbord",
+    "mobile": "Mobil"
   }
 }

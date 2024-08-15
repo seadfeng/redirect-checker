@@ -1,11 +1,7 @@
 "use client"
 
-import { Input } from "@/components/ui/input";
-import { Skeleton } from "@/components/ui/skeleton";
-import { cn } from "@/lib/utils";
-import { useForm } from "react-hook-form";
-import z from "zod";
-
+import { BrowserSwitch } from "@/components/shared/browser-switch";
+import { DeviceSwitch } from "@/components/shared/device-switch";
 import { Markdown } from "@/components/shared/markdown";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,17 +11,25 @@ import {
   FormItem,
   FormMessage
 } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Skeleton } from "@/components/ui/skeleton";
 import { appConfig } from "@/config";
+import { userAgents } from "@/devices";
 import apiClient from "@/lib/api";
-import { ResponseInfo } from "@/types";
+import { cn } from "@/lib/utils";
+import { Browser, browsers, desktopOperatingSystems, Device, devices, mobileOperatingSystems, OperatingSystem, ResponseInfo, SelectOptionType } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SearchCheckIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
-import { Faqs } from "./faqs";
+import { useMemo, useState } from "react";
+import { useForm } from "react-hook-form";
+import z from "zod";
+import { Faqs } from "../../shared/faqs";
 
 const FormValueSchema = z.object({
-  url: z.string().url()
+  url: z.string().url(),
+  device: z.enum(devices),
+  browser: z.enum(browsers)
 })
 
 type FormValues = z.infer<typeof FormValueSchema>;
@@ -39,14 +43,18 @@ export function Main({
   const t = useTranslations();
   const [fetching,setFetching] = useState<boolean>(false);
   const [error,setError] = useState<any>(false);
-  const [userAgent,setUserAgent] = useState<string>("redirectchecker.org");
-  
+  const [browser,setBowser] = useState<Browser>("chrome");
+  const [device,setDevice] = useState<Device>("desktop");
+  const [operatingSystem,setOperatingSystem] = useState<OperatingSystem>("macos");
+
   const [infos,setInfos] = useState<ResponseInfo[]>([]);
 
   let form = useForm<FormValues>({
     resolver: zodResolver(FormValueSchema),
     defaultValues:{
-      url: ""
+      url: "",
+      device: "desktop",
+      browser: "chrome"
     }
   })
 
@@ -72,14 +80,52 @@ export function Main({
       answer: t('frontend.home.faq.qa5.answer')
     },
   ]
+
+  const currentOperatingSystems = useMemo(()=>{
+    if(device === "desktop"){
+      return desktopOperatingSystems; 
+    }else{ // mobile
+      return mobileOperatingSystems;
+    } 
+  },[device]);
+ 
+  // src/devices.ts: userAgents
+  // Device => Operating System => Bowsers
+  const currentBrowsersOptions = useMemo(()=>{
+    let keys: string[] = []; 
+    let options: SelectOptionType[] =  []; 
+    const deviceOperatingSystems = userAgents[device];
+
+    // find active browsers
+    for( const [key,operatingSystemsBrowsers] of Object.entries(deviceOperatingSystems)){
+      if(operatingSystem as string === key){
+        for(const [browserName, browserUserAgents] of Object.entries( operatingSystemsBrowsers )){
+          console.log(browserName, browserUserAgents);
+          keys.push(browserName)
+        }
+      }
+    } 
+    keys.forEach(item =>{
+      options.push({
+        label: item,
+        value: item
+      })
+    });
+
+    // Reset the browser if it is undefined.
+    if(!options.find(option => {option.value === browser as string})){
+      setBowser("chrome") 
+    }
+    return options;
+  },[browser, device, operatingSystem]);
+ 
   const handleSubmit =(values: FormValues)=>{
     setFetching(true);
     setError(false);
     setInfos([]);
     apiClient.post("/redirectcheck", values, {
-      headers: {
-        'Content-Type': 'application/json',
-        'User-Agent': userAgent // TODO: User-Agent Option by user select
+      headers:{
+        "User-Agent": ""
       }
     })
     .then((res) => { 
@@ -121,7 +167,7 @@ export function Main({
         )}
       </div>
     )
-  }
+  } 
 
   const textCls = "text-primary font-medium";
 
@@ -149,6 +195,27 @@ export function Main({
               </FormItem>
             )}
           />
+        <div className="grid grid-cols-1 gap-4 w-full">
+        
+          <FormField
+              control={form.control}
+              name="device"
+              render={({ field }) => (
+                <FormItem> 
+                  <DeviceSwitch defaultValue={field.value} onValueChange={(e) => {field.onChange(e)}} /> 
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="browser"
+              render={({ field }) => (
+                <FormItem> 
+                  <BrowserSwitch defaultValue={field.value} onValueChange={(e) => {field.onChange(e)}} options={currentBrowsersOptions}/> 
+                </FormItem>
+              )}
+            /> 
+        </div>
         </form>
       </Form>
       {error && <div className="rounded-md border border-red-500 p-10 mb-10">{error}</div>}
