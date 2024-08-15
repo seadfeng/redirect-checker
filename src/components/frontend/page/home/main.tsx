@@ -45,7 +45,7 @@ export function Main({
   let form = useForm<FormValues>({
     resolver: zodResolver(FormValueSchema),
     defaultValues:{
-      url: "https://proxysites.ai"
+      url: ""
     }
   })
 
