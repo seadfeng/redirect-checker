@@ -9,31 +9,34 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 
 export function BrowserSwitch({
   onValueChange,
-  defaultValue = "chrome",
-  options = []
+  value = "chrome",
+  options = [] 
 }:{
-  defaultValue: Browser
-  onValueChange?: (value: Browser)=> void,
-  options: SelectOptionType[]
+  value: Browser;
+  onValueChange?: (value: Browser)=> void;
+  options: SelectOptionType[]; 
 }) {
   const t = useTranslations();
-  const [browser, setBrowser] = useState<Browser>(defaultValue);
- 
-  const current = useMemo(()=>{
-    return options.find(option =>  option.value === browser as string )
-  },[browser]);
+  const [browser, setBrowser] = useState<Browser>(value);
+  
 
   const IconItem = useMemo(()=>{
-     if(current?.value === "chrome"){
+    let current = options.find(option =>  option.value === browser as string ); 
+    if(!current) {
+      current = options.find(option =>  option.value === value as string );
+    }
+    if(current?.value === "chrome"){
       return <FaChrome size={20}  style={{ color: '#4285F4' }}/>
-     }else if(current?.value === "edge"){
+    }else if(current?.value === "edge"){
       return <FaEdge size={20}  style={{ color: '#0078D7' }} />
-     }else if(current?.value === "safari"){
+    }else if(current?.value === "safari"){
       return <FaSafari size={20} style={{ color: '#00A1E0' }} />
-     }else{
+    }else if(current?.value === "firefox"){
       return <FaFirefox size={20} style={{ color: '#FF7139' }} />
-     }
-  },[current]);
+    }else{
+      return null;
+    }
+  },[browser, value]);
 
   return (
     <Select 
@@ -41,7 +44,7 @@ export function BrowserSwitch({
         setBrowser(value as Browser);
         if(onValueChange) onValueChange(value as Browser)
       }} 
-      defaultValue={defaultValue}
+      value={value} 
       >
       <FormControl>
         <div className="relative">

@@ -9,10 +9,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 
 export function DeviceSwitch({
   onValueChange,
-  defaultValue = "desktop"
+  defaultValue = "desktop" 
 }:{
-  defaultValue: Device
-  onValueChange?: (value: Device)=> void 
+  defaultValue: Device;
+  onValueChange?: (value: Device)=> void; 
 }) {
   const t = useTranslations();
   const [device, setDevice] = useState<Device>(defaultValue);

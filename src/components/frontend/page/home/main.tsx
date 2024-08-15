@@ -3,6 +3,7 @@
 import { BrowserSwitch } from "@/components/shared/browser-switch";
 import { DeviceSwitch } from "@/components/shared/device-switch";
 import { Markdown } from "@/components/shared/markdown";
+import { SystemSwitch } from "@/components/shared/system-switch";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -17,11 +18,11 @@ import { appConfig } from "@/config";
 import { userAgents } from "@/devices";
 import apiClient from "@/lib/api";
 import { cn } from "@/lib/utils";
-import { Browser, browsers, desktopOperatingSystems, Device, devices, mobileOperatingSystems, OperatingSystem, ResponseInfo, SelectOptionType } from "@/types";
+import { Browser, browsers, desktopOperatingSystems, Device, devices, mobileOperatingSystems, OperatingSystem, operatingSystems, ResponseInfo, SelectOptionType } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SearchCheckIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import z from "zod";
 import { Faqs } from "../../shared/faqs";
@@ -29,7 +30,8 @@ import { Faqs } from "../../shared/faqs";
 const FormValueSchema = z.object({
   url: z.string().url(),
   device: z.enum(devices),
-  browser: z.enum(browsers)
+  browser: z.enum(browsers),
+  system: z.enum(operatingSystems)
 })
 
 type FormValues = z.infer<typeof FormValueSchema>;
@@ -47,6 +49,8 @@ export function Main({
   const [device,setDevice] = useState<Device>("desktop");
   const [operatingSystem,setOperatingSystem] = useState<OperatingSystem>("macos");
 
+  const [currentOperatingSystems,setCurrentOperatingSystems] = useState<SelectOptionType[]>([]); 
+
   const [infos,setInfos] = useState<ResponseInfo[]>([]);
 
   let form = useForm<FormValues>({
@@ -54,7 +58,8 @@ export function Main({
     defaultValues:{
       url: "",
       device: "desktop",
-      browser: "chrome"
+      browser: "chrome",
+      system: "macos"
     }
   })
 
@@ -81,13 +86,28 @@ export function Main({
     },
   ]
 
-  const currentOperatingSystems = useMemo(()=>{
+  useEffect(()=>{
+    let items: SelectOptionType[] = [];
     if(device === "desktop"){
-      return desktopOperatingSystems; 
+      items = desktopOperatingSystems.map(item =>{
+        return {
+          label: item,
+          value: item
+        }
+      })
     }else{ // mobile
-      return mobileOperatingSystems;
-    } 
-  },[device]);
+      items = mobileOperatingSystems.map(item =>{
+        return {
+          label: item,
+          value: item
+        }
+      })
+    }
+    setCurrentOperatingSystems(items); 
+    if (items.length > 0 && items[0].value !== operatingSystem) {
+      setOperatingSystem(items[0].value as OperatingSystem);
+    }
+  },[device]); 
  
   // src/devices.ts: userAgents
   // Device => Operating System => Bowsers
@@ -100,7 +120,7 @@ export function Main({
     for( const [key,operatingSystemsBrowsers] of Object.entries(deviceOperatingSystems)){
       if(operatingSystem as string === key){
         for(const [browserName, browserUserAgents] of Object.entries( operatingSystemsBrowsers )){
-          console.log(browserName, browserUserAgents);
+          // console.log(browserName, browserUserAgents);
           keys.push(browserName)
         }
       }
@@ -112,12 +132,21 @@ export function Main({
       })
     });
 
-    // Reset the browser if it is undefined.
-    if(!options.find(option => {option.value === browser as string})){
-      setBowser("chrome") 
-    }
+    // // Reset the browser if it is undefined.
+    // if(!options.find(option => {option.value === browser as string})){
+    //   setBowser("chrome"); 
+    // }
     return options;
   },[browser, device, operatingSystem]);
+
+  useEffect(()=>{  
+    form.setValue("system", operatingSystem as OperatingSystem );
+
+    // Reset form for browser
+    if(!currentBrowsersOptions.find(browserItem => browserItem.value === browser as string )){
+      form.setValue("browser", "chrome");  
+    }
+  },[currentBrowsersOptions, operatingSystem, browser, form]);
  
   const handleSubmit =(values: FormValues)=>{
     setFetching(true);
@@ -195,23 +224,33 @@ export function Main({
               </FormItem>
             )}
           />
-        <div className="grid grid-cols-1 gap-4 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
         
           <FormField
               control={form.control}
               name="device"
               render={({ field }) => (
                 <FormItem> 
-                  <DeviceSwitch defaultValue={field.value} onValueChange={(e) => {field.onChange(e)}} /> 
+                  <DeviceSwitch defaultValue={field.value} onValueChange={(e) => {field.onChange(e); setDevice(e); }} /> 
                 </FormItem>
               )}
             />
+          <FormField
+              control={form.control}
+              name="system"
+              render={({ field }) => (
+                <FormItem> 
+                  <SystemSwitch value={field.value} onValueChange={(e) => {field.onChange(e); setOperatingSystem(e); }} options={currentOperatingSystems} /> 
+                </FormItem>
+              )}
+            />
+            
             <FormField
               control={form.control}
               name="browser"
               render={({ field }) => (
                 <FormItem> 
-                  <BrowserSwitch defaultValue={field.value} onValueChange={(e) => {field.onChange(e)}} options={currentBrowsersOptions}/> 
+                  <BrowserSwitch value={field.value} onValueChange={(e) => {field.onChange(e); setBowser(e); }} options={currentBrowsersOptions}/> 
                 </FormItem>
               )}
             /> 

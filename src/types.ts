@@ -15,7 +15,7 @@ export type SelectOptionType = {
 }
 export const browsers = ["chrome", "edge", "firefox", "safari"] as const;
 export const devices = ["desktop", "mobile"] as const;
-export const desktopOperatingSystems = ["windows", "macos", "linux"] as const;
+export const desktopOperatingSystems = ["macos", "windows", "linux"] as const;
 export const mobileOperatingSystems = ["ios", "android"] as const;
 export const operatingSystems = ["windows", "macos", "linux", "android", "ios"] as const;
 export type Device = typeof devices[number];
