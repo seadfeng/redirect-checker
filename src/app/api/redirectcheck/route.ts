@@ -8,7 +8,7 @@ const BodySchema = z.object({
   url: z.string().url()
 })
 
-const fetchUrl = async ({ url, headers }: { url: string, headers: Headers }): Promise<ResponseInfo> => {
+const fetchUrl = async ({ url, headers }: { url: string, headers: HeadersInit }): Promise<ResponseInfo> => {
   const startTime = Date.now();
   const newUrl = new URL(url);
   const response = await fetch(url, {
@@ -46,6 +46,8 @@ export async function POST(request: NextRequest & { cf?: Record<string, any> }) 
   let process = true;
   let data: ResponseInfo[] = [];
 
+  request.headers.delete('Content-Length');
+
   const maxTry = 10;
   let i = 0;
   while (process && i < maxTry) {
@@ -59,6 +61,7 @@ export async function POST(request: NextRequest & { cf?: Record<string, any> }) 
       }
       i++;
     } catch (error) {
+      console.error(error)
       data.push({
         url,
         host: new URL(url).host,

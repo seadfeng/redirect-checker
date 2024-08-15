@@ -22,7 +22,7 @@ export function NavBar() {
   const Logo =()=>{
     return(
       <Link
-        href="#"
+        href="/"
         className="flex items-center gap-2 text-lg font-semibold md:text-base"
       >
         <Image alt={appConfig.appName} src={"/logo.png"} width={25} height={25} className="h-6 w-6" />

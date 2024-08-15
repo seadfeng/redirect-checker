@@ -39,6 +39,7 @@ export function Main({
   const t = useTranslations();
   const [fetching,setFetching] = useState<boolean>(false);
   const [error,setError] = useState<any>(false);
+  const [userAgent,setUserAgent] = useState<string>("redirectchecker.org");
   
   const [infos,setInfos] = useState<ResponseInfo[]>([]);
 
@@ -75,7 +76,12 @@ export function Main({
     setFetching(true);
     setError(false);
     setInfos([]);
-    apiClient.post("/redirectcheck", values)
+    apiClient.post("/redirectcheck", values, {
+      headers: {
+        'Content-Type': 'application/json',
+        'User-Agent': userAgent // TODO: User-Agent Option by user select
+      }
+    })
     .then((res) => { 
       setInfos(res as any);
       setFetching(false);
