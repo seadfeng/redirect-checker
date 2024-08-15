@@ -20,7 +20,7 @@ export function Faqs({ faqs, title }:{ faqs: Faq[], title?: string;}){
   const Item: ItemCF = ({faq,value})=>{
     return (
     <AccordionItem value={value}>
-      <AccordionTrigger>{faq.question}</AccordionTrigger>
+      <AccordionTrigger className="font-semibold">{faq.question}</AccordionTrigger>
       <AccordionContent className="prose dark:prose-invert text-base max-w-full">
         <ReactMarkdown components={ {
           ul: ({ children }) => <TypographyUL className="my-6 ml-6 list-disc [&>li]:mt-2">{children}</TypographyUL>,
