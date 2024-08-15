@@ -69,7 +69,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 
 ## Free Redirect Checker API
 
-DEMO:
+### User-Agent: insomnia/9.2.0
 
 ```sh
 curl --request POST \
@@ -81,6 +81,31 @@ curl --request POST \
 }'
 ```
 
+Output JSON
+
+```json
+[
+  {
+    "url": "https://proxysites.ai",
+    "host": "proxysites.ai",
+    "status": 301,
+    "statusText": "Moved Permanently",
+    "duration": "0.060 s",
+    "location": "https://www.proxysites.ai/"
+  },
+  {
+    "url": "https://www.proxysites.ai/",
+    "host": "www.proxysites.ai",
+    "status": 200,
+    "statusText": "OK",
+    "duration": "4.404 s",
+    "location": null
+  }
+]
+```
+
+### User-Agent: iPhone
+
 ```sh
 curl --request POST \
   --url https://www.redirectchecker.org/api/redirectcheck \
@@ -90,7 +115,28 @@ curl --request POST \
 	"url": "https://www.facebook.com"
 }'
 ```
+Output JSON
 
+```json
+[
+	{
+		"url": "https://facebook.com/",
+		"host": "facebook.com",
+		"status": 301,
+		"statusText": "Moved Permanently",
+		"duration": "0.215 s",
+		"location": "https://m.facebook.com/?wtsid=rdr_0mIzDi3eNPLm33XQg"
+	},
+	{
+		"url": "https://m.facebook.com/?wtsid=rdr_0mIzDi3eNPLm33XQg",
+		"host": "m.facebook.com",
+		"status": 200,
+		"statusText": "OK",
+		"duration": "0.250 s",
+		"location": null
+	}
+]
+```
 
 
 ## Deploy to Cloudflare Pages
