@@ -69,6 +69,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 
 ## Free Redirect Checker API
 
+DEMO:
+
 ```sh
 curl --request POST \
   --url https://www.redirectchecker.org/api/redirectcheck \
@@ -78,6 +80,17 @@ curl --request POST \
 	"url": "https://proxysites.ai"
 }'
 ```
+
+```sh
+curl --request POST \
+  --url https://www.redirectchecker.org/api/redirectcheck \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1' \
+  --data '{ 
+	"url": "https://www.facebook.com"
+}'
+```
+
 
 
 ## Deploy to Cloudflare Pages
