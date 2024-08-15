@@ -71,7 +71,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 
 ```sh
 curl --request POST \
-  --url https://redirectcheck.pages.dev/api/redirectcheck \
+  --url https://www.redirectchecker.org/api/redirectcheck \
   --header 'Content-Type: application/json' \
   --header 'User-Agent: insomnia/9.2.0' \
   --data '{ 

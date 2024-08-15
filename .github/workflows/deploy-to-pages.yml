@@ -18,7 +18,9 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Deploy to Cloudflare Pages
-        run: npm run deploy
+        run: |
+          wrangler pages project create redirectchecker --production-branch main
+          npm run deploy 
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
