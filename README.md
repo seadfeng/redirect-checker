@@ -17,8 +17,11 @@ Redirect Checker is an open-source tool designed to analyze and verify URL redir
 To set up the Redirect Checker project locally, follow these steps:
 
 1. Clone the repository:
+
+```sh
 git clone https://github.com/seadfeng/redirect-checker.git
 cd redirect-checker
+```
 
 2. Install dependencies:
 
@@ -88,6 +91,19 @@ The project is structured as follows:
 - ESLint
 - PostCSS
 
+
+## Free Redirect Checker API
+
+```sh
+curl --request POST \
+  --url https://redirectcheck.pages.dev/api/redirectcheck \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.2.0' \
+  --data '{ 
+	"url": "https://proxysites.ai"
+}'
+```
+
 ## Contributing
 
 We welcome contributions to the Redirect Checker project. Please feel free to submit issues, feature requests, or pull requests.
@@ -98,7 +114,7 @@ We welcome contributions to the Redirect Checker project. Please feel free to su
 
 ## About
 
-Redirect Checker is maintained by [seadfeng](https://github.com/seadfeng). For more information, visit the [project homepage](https://redirectcheck.pages.dev/).
+Redirect Checker is maintained by [seadfeng](https://github.com/seadfeng). For more information, visit the [project homepage](https://redirectchecker.org/).
 
 ## Tags
 
