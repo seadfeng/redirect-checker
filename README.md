@@ -58,31 +58,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 3. Click the "Check" button.
 4. Review the results, including the redirect chain, status codes, and final destination.
 
-## Project Structure
-
-The project is structured as follows:
-
-- `.vscode/`: VS Code configuration files
-- `bin/`: Binary files or scripts
-- `public/`: Public assets
-- `src/`: Source code
-  - Components
-  - Pages
-  - Styles
-- `.env`: Environment variables
-- `.eslintrc.json`: ESLint configuration
-- `.gitignore`: Git ignore file
-- `README.md`: This file
-- `components.json`: Component configuration
-- `env.d.ts`: TypeScript definitions for environment variables
-- `next.config.mjs`: Next.js configuration
-- `package-lock.json`: NPM package lock file
-- `package.json`: Project dependencies and scripts
-- `postcss.config.js`: PostCSS configuration
-- `tailwind.config.ts`: Tailwind CSS configuration
-- `tsconfig.json`: TypeScript configuration
-- `wrangler.toml`: Cloudflare Workers configuration
-
 ## Technologies Used
 
 - Next.js
