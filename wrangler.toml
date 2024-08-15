@@ -1,5 +1,5 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "redirectcheck"
+name = "redirectchecker"
 compatibility_date = "2023-05-18"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"

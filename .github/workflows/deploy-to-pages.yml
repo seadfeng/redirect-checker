@@ -6,6 +6,10 @@ on:
 jobs:
   deploy_production:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Publish to Cloudflare Pages
     timeout-minutes: 10
     environment:
       name: production
@@ -20,4 +24,4 @@ jobs:
           projectName: redirectchecker
           # wrangler.toml pages_build_output_dir
           directory: .vercel/output/static
-          environment: production
+          branch: main

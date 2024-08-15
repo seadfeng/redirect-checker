@@ -1,5 +1,10 @@
 # Github Actions
 
+
+## Create a Project
+
+Go to **Cloudflare Pages Dashboard**
+
 ## Environment
 
 ### Cloudflare Account ID
