@@ -41,3 +41,21 @@ Go to **Cloudflare Pages Dashboard**
 3. Copy Token
 
 ![Copy Token](images/copy-token.png)
+
+
+## Update your Git Repository
+
+### Check Your Git Repository Actions
+
+![Git Repository Actions](images/git-actions.png) 
+
+After the Action is completed, go to Cloudflare Workers & Pages and find the project named redirectchecker.
+
+![Conf](images/redirectchecker-pages.png)
+
+
+### Custom domains
+
+![Custom domains](images/custom-domains.png)
+
+After SSL enabled, it may be working 
