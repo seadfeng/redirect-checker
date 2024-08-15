@@ -1,0 +1,20 @@
+name: Deploy Pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy_production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build & Deploy Page
+        uses: cloudflare/wrangler-action@v3
+        with:
+          wranglerVersion: "3.70.0"
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          environment: production
