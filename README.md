@@ -94,7 +94,7 @@ We welcome contributions to the Redirect Checker project. Please feel free to su
 
 ## License
 
-[MIT License](LICENSE)
+[MIT License](MIT-LICENSE)
 
 ## About
 
