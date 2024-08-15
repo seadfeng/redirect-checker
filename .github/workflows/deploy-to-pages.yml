@@ -12,9 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build & Deploy Page
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/pages-action@v1
         with:
           wranglerVersion: "3.70.0"
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: redirectchecker
+          # wrangler.toml pages_build_output_dir
+          directory: .vercel/output/static
           environment: production
