@@ -8,12 +8,13 @@ const BodySchema = z.object({
   url: z.string().url()
 })
 
-const fetchUrl = async (url: string): Promise<ResponseInfo> => {
+const fetchUrl = async ({ url, headers }: { url: string, headers: Headers }): Promise<ResponseInfo> => {
   const startTime = Date.now();
   const newUrl = new URL(url);
   const response = await fetch(url, {
     method: "GET",
-    redirect: "manual"
+    redirect: "manual",
+    headers
   });
   const duration = ((Date.now() - startTime) / 1000).toFixed(3);
 
@@ -49,7 +50,7 @@ export async function POST(request: NextRequest & { cf?: Record<string, any> }) 
   let i = 0;
   while (process && i < maxTry) {
     try {
-      const responseInfo = await fetchUrl(url);
+      const responseInfo = await fetchUrl({ url, headers: request.headers });
       data.push(responseInfo);
       if (responseInfo.location) {
         url = responseInfo.location;
