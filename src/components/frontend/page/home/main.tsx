@@ -20,12 +20,12 @@ import apiClient from "@/lib/api";
 import { cn } from "@/lib/utils";
 import { Browser, browsers, desktopOperatingSystems, Device, devices, mobileOperatingSystems, OperatingSystem, operatingSystems, ResponseInfo, SelectOptionType } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SearchCheckIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import z from "zod";
 import { Faqs } from "../../shared/faqs";
+import { Results } from "./results";
 
 const FormValueSchema = z.object({
   url: z.string().url(),
@@ -45,12 +45,11 @@ export function Main({
   const t = useTranslations();
   const [fetching,setFetching] = useState<boolean>(false);
   const [error,setError] = useState<any>(false);
+  const [userAgent,setUserAgent] = useState<string>("");
   const [browser,setBowser] = useState<Browser>("chrome");
   const [device,setDevice] = useState<Device>("desktop");
-  const [operatingSystem,setOperatingSystem] = useState<OperatingSystem>("macos");
-
-  const [currentOperatingSystems,setCurrentOperatingSystems] = useState<SelectOptionType[]>([]); 
-
+  const [operatingSystem,setOperatingSystem] = useState<OperatingSystem>("macos"); 
+  const [currentOperatingSystems,setCurrentOperatingSystems] = useState<SelectOptionType[]>([]);  
   const [infos,setInfos] = useState<ResponseInfo[]>([]);
 
   let form = useForm<FormValues>({
@@ -109,33 +108,34 @@ export function Main({
     }
   },[device]); 
  
-  // src/devices.ts: userAgents
-  // Device => Operating System => Bowsers
+
   const currentBrowsersOptions = useMemo(()=>{
-    let keys: string[] = []; 
-    let options: SelectOptionType[] =  []; 
+    let objs: {
+      key: string;
+      userAgents: string[]
+    }[] = []; 
+    let options: (SelectOptionType & { userAgents: string[] })[] =  []; 
     const deviceOperatingSystems = userAgents[device];
 
-    // find active browsers
+    // find active browsers and userAgents
     for( const [key,operatingSystemsBrowsers] of Object.entries(deviceOperatingSystems)){
       if(operatingSystem as string === key){
         for(const [browserName, browserUserAgents] of Object.entries( operatingSystemsBrowsers )){
-          // console.log(browserName, browserUserAgents);
-          keys.push(browserName)
+          objs.push({
+            key: browserName,
+            userAgents: browserUserAgents
+          })
         }
       }
     } 
-    keys.forEach(item =>{
-      options.push({
-        label: item,
-        value: item
-      })
-    });
 
-    // // Reset the browser if it is undefined.
-    // if(!options.find(option => {option.value === browser as string})){
-    //   setBowser("chrome"); 
-    // }
+    objs.forEach(item =>{
+      options.push({
+        label: item.key,
+        value: item.key,
+        userAgents: item.userAgents
+      })
+    }) 
     return options;
   },[browser, device, operatingSystem]);
 
@@ -151,10 +151,25 @@ export function Main({
   const handleSubmit =(values: FormValues)=>{
     setFetching(true);
     setError(false);
+    setUserAgent("");
     setInfos([]);
-    apiClient.post("/redirectcheck", values, {
-      headers:{
-        "User-Agent": ""
+    const userAgents = currentBrowsersOptions.find(item =>{
+      return item.value === values.browser
+    })?.userAgents;
+
+    if(!userAgents){
+      console.error("userAgents not found");
+      setFetching(false);
+      return;
+    }
+    const randomIndex = Math.floor(Math.random() * userAgents.length);
+    const randomUserAgent = userAgents[randomIndex];
+    console.log("randomUserAgent", randomUserAgent);
+    setUserAgent(randomUserAgent);
+    apiClient.post("/redirectcheck", {
+      ...values,
+      headers: {
+        "User-Agent": randomUserAgent
       }
     })
     .then((res) => { 
@@ -168,36 +183,7 @@ export function Main({
     });
   }
  
-  const Info =({infos}:{infos: ResponseInfo[]})=>{ 
-    if(infos.length === 0 ) return null;
-    const fromUrl = infos[0].url;
-    return(
-      <div className="bg-secondary/60 p-5 text-xl flex flex-col gap-5">
-        <div className="font-semibold flex items-center">{t('frontend.home.results_for')}: {fromUrl} <SearchCheckIcon size={28} className="ml-2 text-green-700" /></div>
-        {infos.length === 1 && <div className="text-primary">{t('frontend.home.no_redirects_found')}</div>} 
-        {infos.map((info, index) =>
-          <div key={index}>
-            {info.location && <div className="flex flex-col gap-3 font-medium">
-              {index === 0 && <div className="font-semibold">{t('frontend.home.redirect_chain')}: </div>}
-              <div className="bg-secondary p-3 leading-8 text-base">
-                <div className="text-primary truncate">{index + 1}. From: {info.url}</div>
-                <div className="text-green-600 truncate">To: {info.location}</div>
-                <div className="text-yellow-500">{t('frontend.home.status')}: {info.status}</div>
-              </div>
-            </div>}
-            {!info.location && <div data-status={info.status} className="flex flex-col gap-3 font-medium">
-                <div data-status={info.status} className="font-semibold data-[status='0']:text-red-500">{t('frontend.home.final_destination')}:</div>
-                <div data-status={info.status} className="bg-secondary data-[status='0']:bg-red-500 data-[status=0]:bg-opacity-5 p-3 leading-8 text-base">
-                  <div data-status={info.status} className="text-green-600 data-[status='0']:text-red-500 truncate">URL: {info.url}</div>
-                  <div className="text-yellow-500 data-[status='0']:text-yellow-700">{t('frontend.home.status')}: {info.status}</div> 
-                </div>
-            </div> }
-          </div> 
-        )}
-      </div>
-    )
-  } 
-
+  
   const textCls = "text-primary font-medium";
 
   return (
@@ -224,7 +210,7 @@ export function Main({
               </FormItem>
             )}
           />
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full mb-8">
         
           <FormField
               control={form.control}
@@ -258,8 +244,8 @@ export function Main({
         </form>
       </Form>
       {error && <div className="rounded-md border border-red-500 p-10 mb-10">{error}</div>}
-      {fetching && <Skeleton className="h-96 w-full rounded-md" />}
-      {infos && <Info infos={infos} />}
+      {fetching && <Skeleton className="h-96 w-full rounded-md" />} 
+      {infos && <Results userAgent={userAgent} infos={infos} />}
       {block1 && <Markdown content={block1} className="mt-10" />}
       <Faqs faqs={faqs} title={t('frontend.home.faq.title')} />
     </div>
