@@ -2,6 +2,7 @@
  
 import { OperatingSystem, SelectOptionType } from "@/types"
 import { useTranslations } from "next-intl"
+import { useTheme } from "next-themes"
 import { useMemo, useState } from "react"
 import { FaAndroid, FaApple, FaLinux, FaWindows } from "react-icons/fa"
 import { FormControl } from "../ui/form"
@@ -17,6 +18,7 @@ export function SystemSwitch({
   options: SelectOptionType[] 
 }) {
   const t = useTranslations();
+  const { theme } = useTheme(); 
   const [operatingSystem, setOperatingSystem] = useState<OperatingSystem>(value);
 
   const IconItem = useMemo(()=>{
@@ -33,7 +35,7 @@ export function SystemSwitch({
     } else if (current?.value === 'android') {
       return <FaAndroid size={20} style={{ color: '#3DDC84' }} />; // Android color
     } else if (current?.value === 'ios') { // iOS
-      return <FaApple size={20} style={{ color: '#000000' }} />; // iOS color
+      return <FaApple size={20} style={{ color: theme === "dark" ? '#ffffff' : '#000000' }} />; // iOS color
     }else{
       return null
     }
