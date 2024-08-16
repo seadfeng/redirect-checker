@@ -85,22 +85,24 @@ Output JSON
 
 ```json
 [
-  {
-    "url": "https://proxysites.ai",
-    "host": "proxysites.ai",
-    "status": 301,
-    "statusText": "Moved Permanently",
-    "duration": "0.060 s",
-    "location": "https://www.proxysites.ai/"
-  },
-  {
-    "url": "https://www.proxysites.ai/",
-    "host": "www.proxysites.ai",
-    "status": 200,
-    "statusText": "OK",
-    "duration": "4.404 s",
-    "location": null
-  }
+	{
+		"url": "https://proxysites.ai",
+		"host": "proxysites.ai",
+		"status": 301,
+		"statusText": "Moved Permanently",
+		"duration": "0.006 s",
+		"metaRefresh": false,
+		"location": "https://www.proxysites.ai/"
+	},
+	{
+		"url": "https://www.proxysites.ai/",
+		"host": "www.proxysites.ai",
+		"status": 200,
+		"statusText": "OK",
+		"duration": "3.179 s",
+		"metaRefresh": false,
+		"location": null
+	}
 ]
 ```
 
@@ -124,15 +126,52 @@ Output JSON
 		"host": "facebook.com",
 		"status": 301,
 		"statusText": "Moved Permanently",
-		"duration": "0.215 s",
-		"location": "https://m.facebook.com/?wtsid=rdr_0mIzDi3eNPLm33XQg"
+		"duration": "0.289 s",
+		"metaRefresh": false,
+		"location": "https://m.facebook.com/?wtsid=rdr_03YkIjUs18ziSEa5N"
 	},
 	{
-		"url": "https://m.facebook.com/?wtsid=rdr_0mIzDi3eNPLm33XQg",
+		"url": "https://m.facebook.com/?wtsid=rdr_03YkIjUs18ziSEa5N",
 		"host": "m.facebook.com",
 		"status": 200,
 		"statusText": "OK",
-		"duration": "0.250 s",
+		"duration": "0.207 s",
+		"metaRefresh": false,
+		"location": null
+	}
+]
+```
+
+### Meta Refresh
+
+```sh
+curl --request POST \
+  --url https://www.redirectchecker.org/api/redirectcheck \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.2.0' \
+  --data '{ 
+	"url": "https://www.redirectchecker.org/meta-redirect.html"
+}'
+```
+
+```json
+[
+	{
+		"url": "https://www.redirectchecker.org/meta-redirect.html",
+		"host": "www.redirectchecker.org",
+		"status": 200,
+		"statusText": "OK",
+		"duration": "0.305 s",
+		"metaRefresh": true,
+		"location": "https://www.redirectchecker.org/"
+	},
+	{
+		"url": "https://www.redirectchecker.org/",
+		"host": "www.redirectchecker.org",
+		"status": 200,
+		"statusText": "OK",
+		"duration": "0.784 s",
+		"metaRefresh": false,
 		"location": null
 	}
 ]
