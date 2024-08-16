@@ -33,22 +33,24 @@ const fetchUrl = async ({ url, headers }: { url: string, headers?: Headers }): P
   // Calculate the duration of the fetch request
   const duration = ((Date.now() - startTime) / 1000).toFixed(3);
 
-
-  const body = await response.text();
-
-  const match1 = body.match(/<meta[^>]*?http-equiv=["']refresh["'][^>]*?content=["']\d*;\s*url=([^"']*)["'][^>]*?>/)
-
   let location: string | null;
-  if (match1 && match1[1]) {
-    location = match1[1];
-    metaRefresh = true;
+
+  if ([301, 302].includes(response.status)) {
+    location = response.headers.get('location'); // Get the 'location' header if a redirect is indicated
   } else {
-    const match2 = body.match(/<meta[^>]*?content=["']\d*;\s*url=([^"']*)["'][^>]*?http-equiv=["']refresh["'][^>]*?>/);
-    if (match2 && match2[1]) {
-      location = match2[2];
+    const body = await response.text();
+    const match1 = body.match(/<meta[^>]*?http-equiv=["']refresh["'][^>]*?content=["']\d*;\s*url=([^"']*)["'][^>]*?>/)
+    if (match1 && match1[1]) {
+      location = match1[1];
       metaRefresh = true;
     } else {
-      location = response.headers.get('location'); // Get the 'location' header if a redirect is indicated
+      const match2 = body.match(/<meta[^>]*?content=["']\d*;\s*url=([^"']*)["'][^>]*?http-equiv=["']refresh["'][^>]*?>/);
+      if (match2 && match2[1]) {
+        location = match2[2];
+        metaRefresh = true;
+      } else {
+        location = null;
+      }
     }
   }
 
