@@ -187,7 +187,7 @@ export function Main({
   const textCls = "text-primary font-medium";
 
   return (
-    <div className={cn("max-w-2xl mx-auto w-full leading-9 text-base")}> 
+    <div className={cn("max-w-4xl mx-auto w-full leading-9 text-base")}> 
       <h1 className="text-4xl mb-2 font-extrabold">{appConfig.appName}</h1>
       <p className={`${textCls} border-l-8 border-primary/60 pl-4 font-semibold`}>{t('frontend.home.h1')}</p>
       <h2 className="text-2xl flex items-center mt-10 font-semibold">

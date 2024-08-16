@@ -20,6 +20,7 @@ export const Results =({infos, userAgent}:{infos: ResponseInfo[]; userAgent: str
               <div className="text-primary truncate">{index + 1}. From: {info.url}</div>
               <div className="text-green-600 truncate">To: {info.location}</div>
               <div className="text-yellow-500">{t('frontend.home.status')}: {info.status}</div>
+              {info.metaRefresh && <div className="text-orange-500">Meta Refresh</div>}
             </div>
           </div>}
           {!info.location && <div data-status={info.status} className="flex flex-col gap-3 font-medium">
