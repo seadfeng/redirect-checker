@@ -21,6 +21,7 @@ const BodySchema = z.object({
 const fetchUrl = async ({ url, headers }: { url: string, headers?: Headers }): Promise<ResponseInfo> => {
   const startTime = Date.now(); // Record the start time for calculating the request duration
   const newUrl = new URL(url); // Create a URL object to extract the host
+  let metaRefresh = false;
 
   // Perform the fetch request with optional headers and no automatic redirection
   const response = await fetch(url, {
@@ -31,7 +32,25 @@ const fetchUrl = async ({ url, headers }: { url: string, headers?: Headers }): P
 
   // Calculate the duration of the fetch request
   const duration = ((Date.now() - startTime) / 1000).toFixed(3);
-  const location = response.headers.get('location'); // Get the 'location' header if a redirect is indicated
+
+
+  const body = await response.text();
+
+  const match1 = body.match(/<meta[^>]*?http-equiv=["']refresh["'][^>]*?content=["']\d*;\s*url=([^"']*)["'][^>]*?>/)
+
+  let location: string | null;
+  if (match1 && match1[1]) {
+    location = match1[1];
+    metaRefresh = true;
+  } else {
+    const match2 = body.match(/<meta[^>]*?content=["']\d*;\s*url=([^"']*)["'][^>]*?http-equiv=["']refresh["'][^>]*?>/);
+    if (match2 && match2[1]) {
+      location = match2[2];
+      metaRefresh = true;
+    }
+  }
+
+  location = response.headers.get('location'); // Get the 'location' header if a redirect is indicated
 
   // Return an object containing the details of the response
   return {
@@ -40,6 +59,7 @@ const fetchUrl = async ({ url, headers }: { url: string, headers?: Headers }): P
     status: response.status,
     statusText: response.statusText,
     duration: `${duration} s`,
+    metaRefresh,
     location // May be null if there is no redirect
   };
 };
@@ -109,6 +129,7 @@ export async function POST(request: NextRequest) {
         status: 0,
         statusText: "Fetch failed",
         duration: "N/A",
+        metaRefresh: false,
         location: null
       });
       process = false; // Stop the loop on error

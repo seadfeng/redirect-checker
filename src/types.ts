@@ -5,6 +5,7 @@ export type ResponseInfo = {
   statusText: string;
   duration: string;
   location: string | null;
+  metaRefresh: boolean;
 }
 
 export type SelectOptionType = {
