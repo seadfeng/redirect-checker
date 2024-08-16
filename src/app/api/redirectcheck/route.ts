@@ -47,10 +47,10 @@ const fetchUrl = async ({ url, headers }: { url: string, headers?: Headers }): P
     if (match2 && match2[1]) {
       location = match2[2];
       metaRefresh = true;
+    } else {
+      location = response.headers.get('location'); // Get the 'location' header if a redirect is indicated
     }
   }
-
-  location = response.headers.get('location'); // Get the 'location' header if a redirect is indicated
 
   // Return an object containing the details of the response
   return {
