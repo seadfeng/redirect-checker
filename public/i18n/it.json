@@ -39,7 +39,8 @@
           "answer": "Sì, lo strumento identificherà eventuali collegamenti interrotti nella catena di reindirizzamento e ti mostrerà il codice di stato HTTP (come 404 per \"Non trovato\") dove la catena si interrompe."
         },
         "title": "Domande frequenti"
-      }
+      },
+      "duration": "Durata"
     }
   },
   "shared": {

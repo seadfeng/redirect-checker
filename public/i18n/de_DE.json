@@ -39,7 +39,8 @@
           "answer": "Ja, das Tool wird alle defekten Links in der Weiterleitungskette identifizieren und Ihnen den HTTP-Statuscode (wie 404 für \"Nicht gefunden\") anzeigen, bei dem die Kette unterbrochen wird."
         },
         "title": "Häufig gestellte Fragen"
-      }
+      },
+      "duration": "Dauer"
     }
   },
   "shared": {

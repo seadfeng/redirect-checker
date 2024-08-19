@@ -21,6 +21,7 @@ export const Results =({infos, userAgent}:{infos: ResponseInfo[]; userAgent: str
               <div className="text-green-600 truncate">To: {info.location}</div>
               <div className="text-yellow-500">{t('frontend.home.status')}: {info.status}</div>
               {info.metaRefresh && <div className="text-orange-500">Meta Refresh</div>}
+              <div className="text-slate-500">{t('frontend.home.duration')}: {info.duration}</div>
             </div>
           </div>}
           {!info.location && <div data-status={info.status} className="flex flex-col gap-3 font-medium">
@@ -28,6 +29,7 @@ export const Results =({infos, userAgent}:{infos: ResponseInfo[]; userAgent: str
               <div data-status={info.status} className="bg-secondary data-[status='0']:bg-red-500 data-[status=0]:bg-opacity-5 p-3 leading-8 text-base">
                 <div data-status={info.status} className="text-green-600 data-[status='0']:text-red-500 truncate">URL: {info.url}</div>
                 <div className="text-yellow-500 data-[status='0']:text-yellow-700">{t('frontend.home.status')}: {info.status}</div> 
+                <div className="text-slate-500">{t('frontend.home.duration')}: {info.duration}</div>
               </div>
           </div> }
         </div> 

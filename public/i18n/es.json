@@ -39,7 +39,8 @@
           "answer": "Sí, la herramienta identificará cualquier enlace roto en la cadena de redirección y le mostrará el código de estado HTTP (como 404 para \"No encontrado\") donde se rompe la cadena."
         },
         "title": "Preguntas frecuentes"
-      }
+      },
+      "duration": "Duración"
     }
   },
   "shared": {

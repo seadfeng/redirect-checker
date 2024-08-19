@@ -2,5 +2,10 @@
   "shared": {
     "mobile": "移动",
     "desktop": "桌面"
+  },
+  "frontend": {
+    "home": {
+      "duration": "时长"
+    }
   }
 }

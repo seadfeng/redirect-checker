@@ -39,7 +39,8 @@
           "answer": "Tak, narzędzie zidentyfikuje wszelkie uszkodzone linki w łańcuchu przekierowań i pokaże Ci kod statusu HTTP (np. 404 dla \"Nie znaleziono\"), gdzie łańcuch się przerywa.\n"
         },
         "title": "Często zadawane pytania"
-      }
+      },
+      "duration": "Czas trwania"
     }
   },
   "shared": {

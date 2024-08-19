@@ -39,7 +39,8 @@
           "answer": "Ja, verktyget identifierar alla trasiga länkar i omdirigeringskedjan och visar dig HTTP-statuskoden (som 404 för \"Ej hittad\") där kedjan bryts."
         },
         "title": "Vanliga frågor"
-      }
+      },
+      "duration": "Varaktighet"
     }
   },
   "shared": {

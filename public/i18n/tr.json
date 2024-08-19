@@ -39,7 +39,8 @@
           "answer": "Evet, araç yönlendirme zincirindeki bozuk bağlantıları tespit edecek ve zincirin koptuğu yerde HTTP durum kodunu (404 gibi \"Bulunamadı\") gösterecektir."
         },
         "title": "Sıkça Sorulan Sorular"
-      }
+      },
+      "duration": "Süre"
     }
   },
   "shared": {

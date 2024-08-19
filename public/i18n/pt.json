@@ -39,7 +39,8 @@
           "answer": "Sim, a ferramenta identificará qualquer link quebrado na cadeia de redirecionamento e mostrará o código de status HTTP (como 404 para \"Não encontrado\") onde a cadeia se quebra."
         },
         "title": "Perguntas frequentes"
-      }
+      },
+      "duration": "Duração"
     }
   },
   "shared": {

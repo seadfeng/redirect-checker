@@ -39,7 +39,8 @@
           "answer": "Oui, l'outil identifiera tous les liens brisés dans la chaîne de redirection et vous montrera le code d'état HTTP (comme 404 pour \"Non trouvé\") où la chaîne se casse."
         },
         "title": "Foire aux questions"
-      }
+      },
+      "duration": "Durée"
     }
   },
   "shared": {

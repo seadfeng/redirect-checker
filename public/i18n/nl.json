@@ -39,7 +39,8 @@
           "answer": "Ja, de tool zal alle kapotte links in de redirectketen identificeren en u de HTTP-statuscode tonen (zoals 404 voor \"Niet gevonden\") waar de keten breekt."
         },
         "title": "Veelgestelde vragen"
-      }
+      },
+      "duration": "Duur"
     }
   },
   "shared": {

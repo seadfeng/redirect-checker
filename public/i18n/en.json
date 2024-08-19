@@ -39,7 +39,8 @@
           "answer": "Yes, the tool will identify any broken links in the redirect chain and show you the HTTP status code (like 404 for \"Not Found\") where the chain breaks."
         },
         "title": "Frequently Asked Questions"
-      }
+      },
+      "duration": "Duration"
     }
   },
   "shared": {
