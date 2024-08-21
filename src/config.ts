@@ -10,6 +10,8 @@ export const appConfig = {
   appName: "RedirectChecker",
   appDescription: "Redirectchecker",
   gaId: process.env.NEXT_PUBLIC_GA_ID,
+  // change to your pages.dev domain: eg., https://redirectcheck.pages.dev
+  // this is for i18n markdown: public/content/components
   origin: process.env.NODE_ENV === "development" ? "http://127.0.0.1:3000" : "https://redirectcheck.pages.dev",
   i18n: {
     locales,
