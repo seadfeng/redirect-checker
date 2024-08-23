@@ -8,3 +8,8 @@
 
 - remove appConfig.origin
 - update Github Actiosn
+
+
+## 0.1.3.rc
+
+- add alternates to generateMetadata
