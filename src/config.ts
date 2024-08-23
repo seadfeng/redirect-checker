@@ -9,7 +9,7 @@ export const appConfig = {
   appRootDomain: "redirectchecker.org",
   appName: "RedirectChecker",
   appDescription: "Redirectchecker",
-  gaId: process.env.NEXT_PUBLIC_GA_ID,
+  gaId: process.env.NEXT_PUBLIC_GA_ID || "G-47B80TJTLX",
   i18n: {
     locales,
     defaultLocale,
