@@ -13,3 +13,4 @@
 ## 0.1.3.rc
 
 - add alternates to generateMetadata
+- add `x-request-url` to headers (middleware.ts)
