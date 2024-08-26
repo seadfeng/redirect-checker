@@ -40,7 +40,8 @@
         },
         "title": "よくある質問"
       },
-      "duration": "間隔"
+      "duration": "間隔",
+      "trace_url": "トレースURL"
     }
   },
   "shared": {

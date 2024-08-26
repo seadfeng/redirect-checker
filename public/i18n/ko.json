@@ -40,7 +40,8 @@
         },
         "title": "자주 묻는 질문"
       },
-      "duration": "지속"
+      "duration": "지속",
+      "trace_url": "추적 URL"
     }
   },
   "shared": {

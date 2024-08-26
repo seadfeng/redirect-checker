@@ -40,7 +40,8 @@
         },
         "title": "Foire aux questions"
       },
-      "duration": "Durée"
+      "duration": "Durée",
+      "trace_url": "URL de suivi"
     }
   },
   "shared": {

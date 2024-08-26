@@ -40,7 +40,8 @@
         },
         "title": "Frequently Asked Questions"
       },
-      "duration": "Duration"
+      "duration": "Duration",
+      "trace_url": "Trace URL"
     }
   },
   "shared": {

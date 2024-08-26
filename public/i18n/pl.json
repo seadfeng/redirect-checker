@@ -40,7 +40,8 @@
         },
         "title": "Często zadawane pytania"
       },
-      "duration": "Czas trwania"
+      "duration": "Czas trwania",
+      "trace_url": "Śledzenie adresu URL"
     }
   },
   "shared": {

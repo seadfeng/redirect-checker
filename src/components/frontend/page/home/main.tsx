@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
-import { appConfig } from "@/config";
 import { userAgents } from "@/devices";
 import apiClient from "@/lib/api";
 import { cn } from "@/lib/utils";
@@ -188,7 +187,7 @@ export function Main({
 
   return (
     <div className={cn("max-w-4xl mx-auto w-full leading-9 text-base")}> 
-      <h1 className="text-4xl mb-2 font-extrabold">{appConfig.appName}</h1>
+      <h1 className="text-4xl mb-2 font-extrabold">Redirect Checker</h1>
       <p className={`${textCls} border-l-8 border-primary/60 pl-4 font-semibold`}>{t('frontend.home.h1')}</p>
       <h2 className="text-2xl flex items-center mt-10 font-semibold">
         {t('frontend.home.sub_to_h1')} 
@@ -204,7 +203,7 @@ export function Main({
                   <FormControl>
                     <Input type="search" className="rounded-s-md h-13 text-xl aria-[describedby*=-form-item-message]:ring-red-400" placeholder="Enter URL (e.g., https://example.com)" {...field} />
                   </FormControl>
-                  <Button loading={fetching} className="h-13 rounded-e-md" disabled={!field.value || fetching}>{t('frontend.home.check')}</Button>
+                  <Button loading={fetching} className="h-13 rounded-e-md" disabled={!field.value || fetching}>{t('frontend.home.trace_url')}</Button>
                 </div>  
                 {field.value && <FormMessage /> }
               </FormItem>

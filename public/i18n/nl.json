@@ -40,7 +40,8 @@
         },
         "title": "Veelgestelde vragen"
       },
-      "duration": "Duur"
+      "duration": "Duur",
+      "trace_url": "Trace-URL"
     }
   },
   "shared": {

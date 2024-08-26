@@ -40,7 +40,8 @@
         },
         "title": "Sıkça Sorulan Sorular"
       },
-      "duration": "Süre"
+      "duration": "Süre",
+      "trace_url": "URL'yi izle"
     }
   },
   "shared": {

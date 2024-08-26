@@ -40,7 +40,8 @@
         },
         "title": "Vanliga frågor"
       },
-      "duration": "Varaktighet"
+      "duration": "Varaktighet",
+      "trace_url": "Spåra URL"
     }
   },
   "shared": {

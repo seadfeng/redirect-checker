@@ -5,7 +5,8 @@
   },
   "frontend": {
     "home": {
-      "duration": "时长"
+      "duration": "时长",
+      "trace_url": "跟踪网址"
     }
   }
 }
