@@ -6,7 +6,7 @@
 - Seleção personalizada de agente de usuário
 - Avaliação de impacto no SEO
 - Detecção de loops de redirecionamento
-- Análise de redirecionamentos 301 vs 302
+- Análise de redirecionamentos 301, 302, 307 e 308
 - Verificação de meta refresh e redirecionamentos JavaScript
 - Análise de cabeçalhos HTTP (Código de Status, X-Robots-Tag, Rel Canonical)
 
@@ -24,8 +24,8 @@ Redirecionamentos de URL são uma forma de enviar usuários e mecanismos de busc
 
 ### Tipos de Redirecionamentos
 
-- **Redirecionamento 301 (Permanente):** Indica que uma página foi movida permanentemente para uma nova localização.
-- **Redirecionamento 302 (Temporário):** Sugere que uma página está temporariamente localizada em um URL diferente.
+- **Redirecionamento 301 ou 308 (Permanente):** Indica que uma página foi movida permanentemente para uma nova localização.
+- **Redirecionamento 302 ou 307 (Temporário):** Sugere que uma página está temporariamente localizada em um URL diferente.
 - **Meta Refresh:** Um tipo de redirecionamento implementado no nível do HTML, em vez do nível do servidor.
 - **Redirecionamento JavaScript:** Redirecionamentos implementados com JavaScript, muitas vezes menos favoráveis para SEO.
 
@@ -54,8 +54,8 @@ Redirecionamentos de URL são uma forma de enviar usuários e mecanismos de busc
 
 ## Implicações dos Redirecionamentos para SEO
 
-- **Redirecionamentos 301** transmitem a maior parte da equidade de links para a nova URL.
-- **Redirecionamentos 302** são menos ideais para SEO, pois transmitem menos equidade de links.
+- **Redirecionamentos 301 ou 308** transmitem a maior parte da equidade de links para a nova URL.
+- **Redirecionamentos 302 ou 307** são menos ideais para SEO, pois transmitem menos equidade de links.
 - Evite cadeias longas de redirecionamento, pois elas podem diluir o valor SEO e desacelerar os tempos de carregamento das páginas.
 - Use redirecionamentos para consolidar conteúdo duplicado, melhorando o SEO geral do seu site.
 - Implemente redirecionamentos HTTPS corretamente para garantir uma navegação segura sem perder valor de SEO.

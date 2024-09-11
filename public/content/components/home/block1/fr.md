@@ -6,7 +6,7 @@
 - Sélection personnalisée de l'agent utilisateur
 - Évaluation de l'impact SEO
 - Détection des boucles de redirection
-- Analyse des redirections 301 vs 302
+- Analyse des redirections 301, 302, 307 et 308
 - Vérification des redirections Meta Refresh et JavaScript
 - Analyse des en-têtes HTTP (Code de statut, X-Robots-Tag, Rel Canonical)
 
@@ -24,8 +24,8 @@ Les redirections d'URL permettent d'envoyer les utilisateurs et les moteurs de r
 
 ### Types de Redirections
 
-- **Redirection 301 (Permanente) :** Indique qu'une page a été déplacée définitivement à un nouvel emplacement.
-- **Redirection 302 (Temporaire) :** Suggère qu'une page est temporairement située à une autre URL.
+- **Redirection 301 ou 308 (Permanente) :** Indique qu'une page a été déplacée définitivement à un nouvel emplacement.
+- **Redirection 302 ou 307 (Temporaire) :** Suggère qu'une page est temporairement située à une autre URL.
 - **Meta Refresh :** Un type de redirection mis en œuvre au niveau HTML plutôt qu'au niveau serveur.
 - **Redirection JavaScript :** Redirections mises en œuvre à l'aide de JavaScript, souvent moins favorables pour le SEO.
 
@@ -54,8 +54,8 @@ Les redirections d'URL permettent d'envoyer les utilisateurs et les moteurs de r
 
 ## Implications SEO des Redirections
 
-- **Les redirections 301** transmettent la plupart de l'équité des liens vers la nouvelle URL.
-- **Les redirections 302** sont moins idéales pour le SEO car elles ne transmettent pas autant d'équité des liens.
+- **Les redirections 301 ou 308** transmettent la plupart de l'équité des liens vers la nouvelle URL.
+- **Les redirections 302 ou 307** sont moins idéales pour le SEO car elles ne transmettent pas autant d'équité des liens.
 - Évitez les longues chaînes de redirections car elles peuvent diluer la valeur SEO et ralentir les temps de chargement des pages.
 - Utilisez les redirections pour consolider le contenu dupliqué, améliorant ainsi le SEO global de votre site.
 - Implémentez correctement les redirections HTTPS pour garantir une navigation sécurisée sans perdre de valeur SEO.
