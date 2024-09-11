@@ -6,7 +6,7 @@
 - Wybór niestandardowego agenta użytkownika
 - Ocena wpływu SEO
 - Wykrywanie pętli przekierowań
-- Analiza przekierowań 301 vs 302
+- Analiza przekierowań 301, 302, 307 i 308
 - Sprawdzanie przekierowań Meta Refresh i JavaScript
 - Analiza nagłówków HTTP (Kod statusu, X-Robots-Tag, Rel Canonical)
 
@@ -24,4 +24,4 @@ Przekierowania URL to sposób, w jaki można przesłać użytkowników i wyszuki
 
 ### Rodzaje przekierowań
 
-- **Przekierowanie 301 (Trwałe):** W
+- **Przekierowanie 301 lub 308 (Trwałe):** W

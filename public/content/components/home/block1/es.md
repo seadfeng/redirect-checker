@@ -6,7 +6,7 @@
 - Selección de user-agent personalizada
 - Evaluación del impacto en SEO
 - Detección de bucles de redirección
-- Análisis de redirecciones 301 vs 302
+- Análisis de redirecciones 301, 302, 307 y 308
 - Verificación de redirecciones Meta Refresh y JavaScript
 - Análisis de encabezados HTTP (Código de Estado, X-Robots-Tag, Rel Canonical)
 
@@ -24,8 +24,8 @@ Las redirecciones de URL son una manera de enviar a los usuarios y motores de b�
 
 ### Tipos de Redirecciones
 
-- **Redirección 301 (Permanente):** Indica que una página se ha movido permanentemente a una nueva ubicación.
-- **Redirección 302 (Temporal):** Sugiere que una página está temporalmente ubicada en una URL diferente.
+- **Redirección 301 o 308 (Permanente):** Indica que una página se ha movido permanentemente a una nueva ubicación.
+- **Redirección 302 o 307 (Temporal):** Sugiere que una página está temporalmente ubicada en una URL diferente.
 - **Meta Refresh:** Un tipo de redirección implementado a nivel HTML en lugar de a nivel del servidor.
 - **Redirección JavaScript:** Redirecciones implementadas usando JavaScript, a menudo menos favorables para SEO.
 
@@ -54,8 +54,8 @@ Las redirecciones de URL son una manera de enviar a los usuarios y motores de b�
 
 ## Implicaciones SEO de las Redirecciones
 
-- **Redirecciones 301** transfieren la mayor parte del valor del enlace a la nueva URL.
-- **Redirecciones 302** son menos ideales para SEO ya que no transfieren tanto valor del enlace.
+- **Redirecciones 301 o 308** transfieren la mayor parte del valor del enlace a la nueva URL.
+- **Redirecciones 302 o 307** son menos ideales para SEO ya que no transfieren tanto valor del enlace.
 - Evita largas cadenas de redirección, ya que pueden diluir el valor SEO y ralentizar los tiempos de carga de las páginas.
 - Usa redirecciones para consolidar contenido duplicado, mejorando el SEO general de tu sitio.
 - Implementa redirecciones HTTPS correctamente para asegurar una navegación segura sin perder valor SEO.

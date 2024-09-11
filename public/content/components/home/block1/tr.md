@@ -6,7 +6,7 @@
 - Özel kullanıcı ajanı seçimi
 - SEO etki değerlendirmesi
 - Yönlendirme döngüsü tespiti
-- 301 vs 302 yönlendirme analizi
+- 301, 302, 307 ve 308  yönlendirme analizi
 - Meta yenileme ve JavaScript yönlendirme kontrolü
 - HTTP başlık analizi (Durum Kodu, X-Robots-Tag, Rel Canonical)
 
@@ -24,8 +24,8 @@ URL yönlendirmeleri, kullanıcıları ve arama motorlarını bir URL'den diğer
 
 ### Yönlendirme Türleri
 
-- **301 Yönlendirme (Kalıcı):** Bir sayfanın kalıcı olarak yeni bir konuma taşındığını belirtir.
-- **302 Yönlendirme (Geçici):** Bir sayfanın geçici olarak farklı bir URL'de olduğunu öne sürer.
+- **301 veya 308 Yönlendirme (Kalıcı):** Bir sayfanın kalıcı olarak yeni bir konuma taşındığını belirtir.
+- **302 veya 307 Yönlendirme (Geçici):** Bir sayfanın geçici olarak farklı bir URL'de olduğunu öne sürer.
 - **Meta Yenileme:** Sunucu yerine HTML seviyesinde uygulanan bir yönlendirme türüdür.
 - **JavaScript Yönlendirmesi:** JavaScript kullanılarak uygulanan yönlendirmeler, genellikle SEO için daha az tercih edilir.
 
@@ -54,8 +54,8 @@ URL yönlendirmeleri, kullanıcıları ve arama motorlarını bir URL'den diğer
 
 ## Yönlendirmelerin SEO Üzerindeki Etkileri
 
-- **301 yönlendirmeleri**, çoğu bağlantı değerini yeni URL'ye aktarır.
-- **302 yönlendirmeleri** SEO için daha az idealdir çünkü daha az bağlantı değeri aktarır.
+- **301 veya 308 yönlendirmeleri**, çoğu bağlantı değerini yeni URL'ye aktarır.
+- **302 veya 307 yönlendirmeleri** SEO için daha az idealdir çünkü daha az bağlantı değeri aktarır.
 - Uzun yönlendirme zincirlerinden kaçının çünkü bu, SEO değerini azaltabilir ve sayfa yükleme sürelerini yavaşlatabilir.
 - Tekrarlanan içeriği konsolide etmek için yönlendirmeleri kullanın, böylece sitenizin genel SEO'sunu iyileştirin.
 - HTTPS yönlendirmelerini doğru bir şekilde uygulayarak güvenli taramayı sağlayın ve SEO değerini kaybetmeyin.

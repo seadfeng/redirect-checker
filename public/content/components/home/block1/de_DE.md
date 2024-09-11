@@ -6,7 +6,7 @@
 - Benutzerdefinierte Auswahl des User-Agents
 - Bewertung der SEO-Auswirkungen
 - Erkennung von Weiterleitungsschleifen
-- Analyse von 301- vs. 302-Weiterleitungen
+- Analyse von 301-, 302-, 307- und 308-Weiterleitungen
 - Überprüfung von Meta-Refresh- und JavaScript-Weiterleitungen
 - Analyse von HTTP-Headern (Statuscode, X-Robots-Tag, Rel Canonical)
 
@@ -24,8 +24,8 @@ URL-Weiterleitungen sind eine Methode, um Benutzer und Suchmaschinen von einer U
 
 ### Arten von Weiterleitungen
 
-- **301-Weiterleitung (Permanent):** Zeigt an, dass eine Seite dauerhaft an einen neuen Ort verschoben wurde.
-- **302-Weiterleitung (Temporär):** Deutet darauf hin, dass eine Seite vorübergehend unter einer anderen URL zu finden ist.
+- **301- oder 308-Weiterleitung (Permanent):** Zeigt an, dass eine Seite dauerhaft an einen neuen Ort verschoben wurde.
+- **302- oder 307-Weiterleitung (Temporär):** Deutet darauf hin, dass eine Seite vorübergehend unter einer anderen URL zu finden ist.
 - **Meta Refresh:** Eine Art von Weiterleitung, die auf HTML-Ebene statt auf Server-Ebene implementiert wird.
 - **JavaScript-Weiterleitung:** Weiterleitungen, die mit JavaScript implementiert sind, oft weniger vorteilhaft für SEO.
 
@@ -54,8 +54,8 @@ URL-Weiterleitungen sind eine Methode, um Benutzer und Suchmaschinen von einer U
 
 ## SEO-Auswirkungen von Weiterleitungen
 
-- **301-Weiterleitungen** übertragen den Großteil des Linkwerts auf die neue URL.
-- **302-Weiterleitungen** sind weniger ideal für SEO, da sie nicht so viel Linkwert übertragen.
+- **301- oder 308-Weiterleitungen** übertragen den Großteil des Linkwerts auf die neue URL.
+- **302- oder 307-Weiterleitungen** sind weniger ideal für SEO, da sie nicht so viel Linkwert übertragen.
 - Vermeiden Sie lange Weiterleitungsketten, da sie den SEO-Wert verwässern und die Ladezeiten der Seite verlangsamen können.
 - Verwenden Sie Weiterleitungen, um doppelte Inhalte zu konsolidieren und das allgemeine SEO Ihrer Website zu verbessern.
 - Implementieren Sie HTTPS-Weiterleitungen korrekt, um sicheres Browsen zu gewährleisten, ohne den SEO-Wert zu verlieren.

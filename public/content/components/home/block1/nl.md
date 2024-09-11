@@ -6,7 +6,7 @@
 - Aangepaste gebruikersagentselectie
 - SEO-impactbeoordeling
 - Detectie van omleidingslussen
-- Analyse van 301 vs 302 omleidingen
+- Analyse van 301-, 302-, 307- en 308-omleidingen
 - Controle van meta-refresh en JavaScript-omleidingen
 - HTTP-headeranalyse (statuscode, X-Robots-Tag, Rel Canonical)
 
@@ -24,8 +24,8 @@ URL-omleidingen zijn een manier om gebruikers en zoekmachines van de ene URL naa
 
 ### Soorten Omleidingen
 
-- **301 Omleiding (Permanent):** Geeft aan dat een pagina permanent naar een nieuwe locatie is verplaatst.
-- **302 Omleiding (Tijdelijk):** Suggereert dat een pagina tijdelijk op een andere URL is geplaatst.
+- **301 of 308 Omleiding (Permanent):** Geeft aan dat een pagina permanent naar een nieuwe locatie is verplaatst.
+- **302 of 307 Omleiding (Tijdelijk):** Suggereert dat een pagina tijdelijk op een andere URL is geplaatst.
 - **Meta Refresh:** Een soort omleiding die op HTML-niveau wordt geïmplementeerd in plaats van op serverniveau.
 - **JavaScript Omleiding:** Omleidingen die met JavaScript worden geïmplementeerd, vaak minder gunstig voor SEO.
 
@@ -54,8 +54,8 @@ URL-omleidingen zijn een manier om gebruikers en zoekmachines van de ene URL naa
 
 ## SEO-Implicaties Van Omleidingen
 
-- **301-omleidingen** geven de meeste link equity door naar de nieuwe URL.
-- **302-omleidingen** zijn minder ideaal voor SEO omdat ze minder link equity doorgeven.
+- **301 of 308 omleidingen** geven de meeste link equity door naar de nieuwe URL.
+- **302 of 307 omleidingen** zijn minder ideaal voor SEO omdat ze minder link equity doorgeven.
 - Vermijd lange omleidingsketens, omdat ze de SEO-waarde kunnen verdunnen en de laadtijden van pagina's kunnen vertragen.
 - Gebruik omleidingen om dubbele inhoud te consolideren en de algehele SEO van je site te verbeteren.
 - Implementeer HTTPS-omleidingen correct om veilige browsen te garanderen zonder SEO-waarde te verliezen.
