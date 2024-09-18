@@ -1,7 +1,7 @@
 {
   "frontend": {
-    "go_to_homepage": "Go to homepage",
-    "page_not_found": "Page not found",
+    "go_to_homepage": "Anasayfaya Git",
+    "page_not_found": "Sayfa bulunamadı",
     "meta": {
       "default": {
         "title": "Yönlendirme Kontrolü - Nihai URL Yönlendirme Analiz Aracınız",
@@ -10,13 +10,13 @@
     },
     "home": {
       "h1": "Nihai URL Yönlendirme Analiz Aracınız",
-      "sub_to_h1": "Kontrollera dina omdirigeringar och statuskoder",
+      "sub_to_h1": "Yönlendirmelerinizi ve Durum Kodlarınızı Kontrol Edin",
       "results_for": "Sonuçlar",
       "no_redirects_found": "Hiçbir yönlendirme bulunamadı.",
       "redirect_chain": "Yönlendirme Zinciri",
       "status": "Durum",
-      "final_destination": "Nihai hedef",
-      "check": "Kontrol etmek",
+      "final_destination": "Nihai Hedef",
+      "check": "Kontrol Et",
       "faq": {
         "qa1": {
           "answer": "Evet, toplu yönlendirme denetleyicimiz birden fazla URL'yi aynı anda analiz etmenize olanak tanır. Giriş alanına her satırda bir URL girmeniz yeterlidir.\n",
