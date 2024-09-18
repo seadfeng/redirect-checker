@@ -6,7 +6,7 @@
 - Anpassad användaragentval
 - SEO-påverkan bedömning
 - Upptäckte omdirigeringsloopar
-- Analys av 301, 302, 307 och 308 omdirigeringar
+- Analys av 301, 302, 303, 307 och 308 omdirigeringar
 - Kontroll av meta-refresh och JavaScript-omdirigeringar
 - HTTP-headeranalys (statuskod, X-Robots-Tag, Rel Canonical)
 
@@ -26,6 +26,7 @@ URL-omdirigeringar är ett sätt att skicka användare och sökmotorer från en 
 
 - **301 eller 308 Omdirigering (Permanent):** Indikerar att en sida har flyttats permanent till en ny plats.
 - **302 eller 307 Omdirigering (Tillfällig):** Indikerar att en sida tillfälligt finns på en annan URL.
+- **303 Omdirigering (se annat):** Bör användas för att omdirigera användare till en annan webbadress efter en åtgärd, men används ibland istället för en mer lämplig typ.
 - **Meta Refresh:** En typ av omdirigering som implementeras på HTML-nivå istället för på servernivå.
 - **JavaScript Omdirigering:** Omdirigeringar implementerade med JavaScript, vilket ofta är mindre fördelaktigt för SEO.
 
@@ -56,6 +57,7 @@ URL-omdirigeringar är ett sätt att skicka användare och sökmotorer från en 
 
 - **301 eller 308 omdirigeringar** överför det mesta av länkekviteten till den nya URL:en.
 - **302 eller 307 omdirigeringar** är mindre idealiska för SEO eftersom de överför mindre länkekvitet.
+- **303 omdirigeringar** har mindre effekt för SEO eftersom de är designade för användarupplevelse och formulärhantering.
 - Undvik långa omdirigeringskedjor eftersom de kan späda ut SEO-värdet och sakta ner sidladdningstider.
 - Använd omdirigeringar för att konsolidera duplicerat innehåll och förbättra den övergripande SEO:n på din webbplats.
 - Implementera HTTPS-omdirigeringar korrekt för att säkerställa säker webbläsning utan att förlora SEO-värde.

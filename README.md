@@ -6,7 +6,7 @@ Redirect Checker is an open-source tool designed to analyze and verify URL redir
 
 - Analyze single or multiple URL redirects
 - Detailed redirect chain visualization
-- Support for various redirect types (301, 302, 307, 308, meta refresh, JavaScript)
+- Support for various redirect types (301, 302, 303, 307, 308, meta refresh, JavaScript)
 - Custom user-agent selection
 - SEO impact assessment
 - Redirect loop detection
