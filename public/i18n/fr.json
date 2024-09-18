@@ -46,6 +46,7 @@
   },
   "shared": {
     "mobile": "Mobile",
-    "desktop": "Bureau"
+    "desktop": "Bureau",
+    "strip_tracking_parameters": "Supprimer les paramètres de suivi"
   }
 }

@@ -50,6 +50,7 @@ export function Main({
   const [operatingSystem,setOperatingSystem] = useState<OperatingSystem>("macos"); 
   const [currentOperatingSystems,setCurrentOperatingSystems] = useState<SelectOptionType[]>([]);  
   const [infos,setInfos] = useState<ResponseInfo[]>([]);
+  const [stripTracking,setStripTracking] = useState<boolean>(false);
 
   let form = useForm<FormValues>({
     resolver: zodResolver(FormValueSchema),
@@ -244,7 +245,14 @@ export function Main({
       </Form>
       {error && <div className="rounded-md border border-red-500 p-10 mb-10">{error}</div>}
       {fetching && <Skeleton className="h-96 w-full rounded-md" />} 
-      {infos && <Results userAgent={userAgent} infos={infos} />}
+      {infos && (
+        <Results 
+          userAgent={userAgent} 
+          infos={infos} 
+          stripTracking={stripTracking} 
+          onStripTrackingChange={setStripTracking} 
+        />
+      )}
       {block1 && <Markdown content={block1} className="mt-10" />}
       <Faqs faqs={faqs} title={t('frontend.home.faq.title')} />
     </div>

@@ -1,8 +1,15 @@
+import { TidyURL } from '@protontech/tidy-url';
+import { StripTrackingSwitch } from "@/components/shared/strip-tracking-switch";
 import { ResponseInfo } from "@/types";
 import { SearchCheckIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-export const Results =({infos, userAgent}:{infos: ResponseInfo[]; userAgent: string;})=>{ 
+export const Results = ({ infos, userAgent, stripTracking, onStripTrackingChange }: {
+  infos: ResponseInfo[];
+  userAgent: string;
+  stripTracking: boolean;
+  onStripTrackingChange?: (value: boolean) => void;
+}) => {
   if(infos.length === 0 ) return null;
   const fromUrl = infos[0].url;
   const t = useTranslations();
@@ -27,14 +34,20 @@ export const Results =({infos, userAgent}:{infos: ResponseInfo[]; userAgent: str
           {!info.location && <div data-status={info.status} className="flex flex-col gap-3 font-medium">
               <div data-status={info.status} className="font-semibold data-[status='0']:text-red-500">{t('frontend.home.final_destination')}:</div>
               <div data-status={info.status} className="bg-secondary data-[status='0']:bg-red-500 data-[status=0]:bg-opacity-5 p-3 leading-8 text-base">
-                <div data-status={info.status} className="text-green-600 data-[status='0']:text-red-500 truncate">URL: {info.url}</div>
+                <div data-status={info.status} className="text-green-600 data-[status='0']:text-red-500 truncate">URL: {stripTracking ? TidyURL.clean(info.url).url : info.url}</div>
                 <div className="text-yellow-500 data-[status='0']:text-yellow-700">{t('frontend.home.status')}: {info.status}</div> 
                 <div className="text-slate-500">{t('frontend.home.duration')}: {info.duration}</div>
               </div>
-          </div> }
-        </div> 
-      )}
-    </div>
+            </div>}
+          </div>
+        )}
+        <div className="mt-5">
+          <StripTrackingSwitch
+            defaultValue={stripTracking}
+            onValueChange={onStripTrackingChange}
+          />
+        </div>
+      </div>
     </>
   )
 } 
