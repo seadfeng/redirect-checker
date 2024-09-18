@@ -46,6 +46,7 @@
   },
   "shared": {
     "desktop": "デスクトップ",
-    "mobile": "携帯"
+    "mobile": "携帯",
+    "strip_tracking_parameters": "追跡パラメータを削除する"
   }
 }

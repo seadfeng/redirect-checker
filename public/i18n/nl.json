@@ -46,6 +46,7 @@
   },
   "shared": {
     "desktop": "Bureaublad",
-    "mobile": "Mobiel"
+    "mobile": "Mobiel",
+    "strip_tracking_parameters": "Trackingparameters verwijderen"
   }
 }

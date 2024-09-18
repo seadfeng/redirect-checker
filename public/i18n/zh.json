@@ -6,7 +6,8 @@
   "frontend": {
     "home": {
       "duration": "时长",
-      "trace_url": "跟踪网址"
+      "trace_url": "跟踪网址",
+      "strip_tracking_parameters": "删除跟踪参数"
     }
   }
 }

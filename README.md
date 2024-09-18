@@ -11,6 +11,7 @@ Redirect Checker is an open-source tool designed to analyze and verify URL redir
 - SEO impact assessment
 - Redirect loop detection
 - HTTP header analysis (Status Code, X-Robots-Tag, Rel Canonical)
+- Optionally strip tracking parameters from the final URL
 
 ## Installation
 

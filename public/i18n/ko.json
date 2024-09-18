@@ -46,6 +46,7 @@
   },
   "shared": {
     "desktop": "데스크탑",
-    "mobile": "이동하는"
+    "mobile": "이동하는",
+    "strip_tracking_parameters": "추적 매개변수 제거"
   }
 }

@@ -46,6 +46,7 @@
   },
   "shared": {
     "desktop": "Masaüstü",
-    "mobile": "Mobil"
+    "mobile": "Mobil",
+    "strip_tracking_parameters": "İzleme parametrelerini kaldır"
   }
 }

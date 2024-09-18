@@ -46,6 +46,7 @@
   },
   "shared": {
     "desktop": "Skrivbord",
-    "mobile": "Mobil"
+    "mobile": "Mobil",
+    "strip_tracking_parameters": "Ta bort spårningsparametrar"
   }
 }
