@@ -6,7 +6,7 @@
 - Wybór niestandardowego agenta użytkownika
 - Ocena wpływu SEO
 - Wykrywanie pętli przekierowań
-- Analiza przekierowań 301, 302, 307 i 308
+- Analiza przekierowań 301, 302, 303, 307 i 308
 - Sprawdzanie przekierowań Meta Refresh i JavaScript
 - Analiza nagłówków HTTP (Kod statusu, X-Robots-Tag, Rel Canonical)
 
@@ -26,6 +26,7 @@ Przekierowania URL to sposób, w jaki można przesłać użytkowników i wyszuki
 
 - **Przekierowanie 301 lub 308 (Trwałe):** Wskazuje, że strona została trwale przeniesiona do nowej lokalizacji.
 - **Przekierowanie 302 lub 307 (tymczasowe):** sugeruje, że strona tymczasowo znajduje się pod innym adresem URL.
+- **Przekierowanie 303 (zobacz inne):** Powinno być używane do przekierowywania użytkowników do innego adresu URL po wykonaniu akcji, ale czasami jest używane zamiast bardziej odpowiedniego typu.
 - **Odświeżanie meta:** Typ przekierowania implementowanego na poziomie HTML, a nie na poziomie serwera.
 - **Przekierowanie JavaScript:** Przekierowania implementowane za pomocą JavaScript, często mniej korzystne dla SEO.
 
@@ -55,6 +56,7 @@ Przekierowania URL to sposób, w jaki można przesłać użytkowników i wyszuki
 
 - **Przekierowania 301 lub 308** przekazują większość kapitału linku do nowego adresu URL.
 - **Przekierowania 302 lub 307** są mniej idealne dla SEO, ponieważ nie przekazują tak dużo kapitału linku.
+- **Przekierowania 303** mają mniejszy wpływ na SEO, ponieważ są projektowane z myślą o doświadczeniu użytkownika i obsłudze formularzy.
 - Unikaj długich łańcuchów przekierowań, ponieważ mogą one osłabiać wartość SEO i spowalniać czas ładowania strony.
 - Używaj przekierowań, aby skonsolidować zduplikowaną treść, poprawiając ogólne SEO swojej witryny.
 - Poprawnie wdrażaj przekierowania HTTPS, aby zapewnić bezpieczne przeglądanie bez utraty wartości SEO.

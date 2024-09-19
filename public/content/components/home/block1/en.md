@@ -6,7 +6,7 @@
 - Custom user-agent selection
 - SEO impact assessment
 - Redirect loop detection
-- Analysis of 301, 302, 307, and 308 redirects
+- Analysis of 301, 302, 303, 307, and 308 redirects
 - Meta refresh and JavaScript redirect checking
 - HTTP header analysis (Status Code, X-Robots-Tag, Rel Canonical)
 
@@ -26,6 +26,7 @@ URL redirects are a way to send users and search engines from one URL to another
 
 - **301 or 308 Redirect (Permanent):** Indicates that a page has permanently moved to a new location.
 - **302 or 307 Redirect (Temporary):** Suggests that a page is temporarily located at a different URL.
+- **303 Redirect (See Other):** Should be used to redirect users to a different URL after an action but is sometimes used instead of a more appropriate type.
 - **Meta Refresh:** A type of redirect implemented at the HTML level rather than the server level.
 - **JavaScript Redirect:** Redirects implemented using JavaScript, often less favorable for SEO.
 
@@ -56,6 +57,7 @@ URL redirects are a way to send users and search engines from one URL to another
 
 - **301 or 308 redirects** pass most of the link equity to the new URL.
 - **302 or 307 redirects** are less ideal for SEO as they don't pass as much link equity.
+- **303 redirects** are less impactful for SEO as they are designed for user experience and form handling.
 - Avoid long redirect chains as they can dilute SEO value and slow down page load times.
 - Use redirects to consolidate duplicate content, improving your site's overall SEO.
 - Implement HTTPS redirects correctly to ensure secure browsing without losing SEO value.
