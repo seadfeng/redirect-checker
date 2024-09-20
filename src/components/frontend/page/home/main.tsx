@@ -49,8 +49,7 @@ export function Main({
   const [device,setDevice] = useState<Device>("desktop");
   const [operatingSystem,setOperatingSystem] = useState<OperatingSystem>("macos"); 
   const [currentOperatingSystems,setCurrentOperatingSystems] = useState<SelectOptionType[]>([]);  
-  const [infos,setInfos] = useState<ResponseInfo[]>([]);
-  const [stripTracking,setStripTracking] = useState<boolean>(false);
+  const [infos,setInfos] = useState<ResponseInfo[]>([]); 
 
   let form = useForm<FormValues>({
     resolver: zodResolver(FormValueSchema),
@@ -248,9 +247,7 @@ export function Main({
       {infos && (
         <Results 
           userAgent={userAgent} 
-          infos={infos} 
-          stripTracking={stripTracking} 
-          onStripTrackingChange={setStripTracking} 
+          infos={infos}
         />
       )}
       {block1 && <Markdown content={block1} className="mt-10" />}

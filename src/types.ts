@@ -24,4 +24,3 @@ export type Browser = typeof browsers[number];
 export type OperatingSystem = typeof operatingSystems[number];
 export type DesktopOperatingSystem = typeof desktopOperatingSystems[number];
 export type MobileOperatingSystem = typeof mobileOperatingSystems[number];
-export type TrackingOption = boolean;
