@@ -22,7 +22,7 @@ export const Results = ({ infos, userAgent }: {
     <>
     <div className="text-xs text-pretty mb-5">User-Agent: {userAgent}</div>
     <div className="bg-secondary/60 p-5 text-xl flex flex-col gap-5">
-      <div className="font-semibold flex items-center">{t('frontend.home.results_for')}: {fromUrl} <SearchCheckIcon size={28} className="ml-2 text-green-700" /></div>
+      <div className="font-semibold flex items-center flex-wrap break-all">{t('frontend.home.results_for')}: {fromUrl} <SearchCheckIcon size={28} className="ml-2 text-green-700" /></div>
       {infos.length === 1 && <div className="text-primary">{t('frontend.home.no_redirects_found')}</div>} 
       {infos.map((info, index) =>
         <div key={index}>
@@ -56,4 +56,4 @@ export const Results = ({ infos, userAgent }: {
       </div>
     </>
   )
-} 
+}
