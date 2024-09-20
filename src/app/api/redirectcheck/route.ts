@@ -35,7 +35,7 @@ const fetchUrl = async ({ url, headers }: { url: string, headers?: Headers }): P
 
   let location: string | null;
 
-  if ([301, 302, 307, 308].includes(response.status)) {
+  if ([301, 302, 303, 307, 308].includes(response.status)) {
     location = response.headers.get('location'); // Get the 'location' header if a redirect is indicated
   } else {
     const body = await response.text();

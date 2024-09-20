@@ -46,6 +46,7 @@
   },
   "shared": {
     "desktop": "Рабочий стол",
-    "mobile": "мобильный"
+    "mobile": "мобильный",
+    "strip_tracking_parameters": "Удалить параметры отслеживания"
   }
 }

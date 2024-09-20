@@ -46,6 +46,7 @@
   },
   "shared": {
     "mobile": "Przenośny",
-    "desktop": "Pulpit"
+    "desktop": "Pulpit",
+    "strip_tracking_parameters": "Usuń parametry śledzenia"
   }
 }
